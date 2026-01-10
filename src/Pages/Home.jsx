@@ -22,6 +22,7 @@ import Service from "../Components/Service";
 import CaseStudyComonent from "../Components/CaseStudy";
 import UseCases from './../Components/UseCases';
 import IndustrySection from "../Components/industry/IndustrySection";
+import Testimonials from "./Testimonials";
 
 const Home = () => {
   return (
@@ -764,10 +765,11 @@ const Home = () => {
           <Service />
           <Achievements />
           <IndustrySection/>
-          <CaseStudyComonent />
+          {/* <CaseStudyComonent /> */}
           <UseCases/>
+          <Testimonials/>
 
-          <section className="section_home_testimonials">
+          {/* <section className="section_home_testimonials">
             <div className="padding-global">
               <div className="container-large">
                 <div className="padding-section-medium">
@@ -990,7 +992,7 @@ const Home = () => {
                 </div>
               </div>
             </div>
-          </section>
+          </section> */}
 
           <section
             id="products"

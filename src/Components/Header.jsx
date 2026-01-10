@@ -583,9 +583,9 @@ const Header = () => {
                   <NavLink to="/projects" className="navbar_link">
                     Projects
                   </NavLink>
-                  {/* <NavLink to="/blogs" className="navbar_link">
-                    Blogs
-                  </NavLink> */}
+                  <NavLink to="/pricing" className="navbar_link">
+                    Pricing
+                  </NavLink>
                 </div>
                 <div className="navbar_menu-buttons">
                   <div className="navbar_button is-base">

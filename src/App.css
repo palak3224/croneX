@@ -902,6 +902,17 @@ a{
   filter: grayscale(0%) brightness(1);
 }
 
+.pricing_header_image {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    /* object-position: center; */
+}
+
+/* .cost-calculator-section{
+  height: 100vh;
+} */
+
 @keyframes scroll-logos {
   0% {
     transform: translateX(0);
@@ -964,3 +975,5 @@ a{
     height: 250px !important;
   }
 }
+
+
