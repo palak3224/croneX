@@ -21,6 +21,7 @@ import Achievements from "../Components/Achievements";
 import Service from "../Components/Service";
 import CaseStudyComonent from "../Components/CaseStudy";
 import UseCases from './../Components/UseCases';
+import IndustrySection from "../Components/industry/IndustrySection";
 
 const Home = () => {
   return (
@@ -762,6 +763,7 @@ const Home = () => {
           <AboutComponent />
           <Service />
           <Achievements />
+          <IndustrySection/>
           <CaseStudyComonent />
           <UseCases/>
 

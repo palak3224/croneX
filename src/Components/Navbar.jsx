@@ -6,8 +6,7 @@ const Navbar = () => {
     <div>
   
 
-     
-
+    
    
 
    

@@ -1,0 +1,264 @@
+
+
+/* =========================
+   INDUSTRY SECTION
+========================= */
+
+.industry {
+  padding: 80px 120px; /* default for large screens */
+}
+
+/* =========================
+   HEADER
+========================= */
+
+.industry-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 40px;
+  flex-wrap: wrap; /* allows wrapping on small screens */
+}
+
+.industry-header h1 {
+  font-size: 48px;
+  font-weight: 600;
+  line-height: 1.2;
+  max-width: 100%;
+}
+
+.industry-header button {
+  background: #1e90ff;
+  border: none;
+  color: #fff;
+  padding: 14px 22px;
+  border-radius: 10px;
+  cursor: pointer;
+  margin-left: -20px;
+  flex-shrink: 0; /* button won't shrink */
+}
+
+/* =========================
+   COMMON BACKGROUND BOX
+========================= */
+
+.industry-box {
+  background: linear-gradient(180deg, #1b1b1b, #141414);
+  border-radius: 24px;
+  padding: 40px;
+}
+
+/* =========================
+   TABS / NAVBAR
+========================= */
+
+.industry-tabs {
+  display: flex;
+  justify-content: space-between;
+  background: #2b2a2a;
+  padding: 22px 28px;
+  border-radius: 18px;
+  margin-bottom: 50px;
+  flex-wrap: nowrap; /* wrap tabs on smaller screens */
+  gap: 12px; /* space between tabs when wrapped */
+  overflow-x: auto; /* scroll if too many tabs */
+}
+
+.industry-tab {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  color: #9a9a9a;
+  min-width: 90px;
+  cursor: pointer;
+  flex-shrink: 0;
+}
+
+.industry-tab .icon {
+  background: #2a2a2a;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10px;
+  font-size: 18px;
+}
+
+.industry-tab.active {
+  color: #fff;
+}
+
+.industry-tab.active .icon {
+  background: #2b2b44;
+}
+
+.industry-points {
+  list-style: none;
+  padding: 0;
+  margin-top: 1.5rem;
+}
+
+.industry-points li {
+  position: relative;
+  padding-left: 1.5rem;
+  margin-bottom: 0.75rem;
+  font-size: 1rem;
+  color: #333;
+}
+
+.industry-points {
+  list-style: none;
+  padding: 0;
+  margin-top: 1.5rem;
+}
+
+.industry-points li {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 0.75rem;
+  font-size: 1rem;
+  color: #cfcfcf;
+}
+
+.industry-points li i {
+  font-size: 18px;
+  color: #4f46e5; /* accent color */
+  flex-shrink: 0;
+}
+
+
+
+/* =========================
+   CONTENT AREA
+========================= */
+
+.industry-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr; /* 2-column grid */
+  align-items: center;
+  gap: 40px;
+}
+
+.industry-content h2 {
+  font-size: 32px;
+  margin-bottom: 16px;
+  padding-left: 20px;
+}
+
+.industry-content p {
+  color: #cfcfcf;
+  max-width: 520px;
+  line-height: 1.6;
+  padding-left: 20px;
+}
+
+.industry-content img {
+  width: 100%;
+  border-radius: 16px;
+  object-fit: cover;
+}
+
+/* =========================
+   RESPONSIVE STYLES
+========================= */
+
+/* Tablets (768px - 1024px) */
+@media (max-width: 1024px) {
+  .industry {
+    padding: 60px 60px;
+  }
+
+  .industry-header h1 {
+    font-size: 38px;
+    margin-bottom: 20px;
+  }
+
+  .industry-header button {
+    margin-left: 0;
+    margin-top: 10px;
+  }
+
+  .industry-content {
+    grid-template-columns: 1fr; /* single column */
+    gap: 30px;
+  }
+
+  .industry-content p {
+    max-width: 100%;
+  }
+}
+
+/* Small tablets / large phones (600px - 768px) */
+@media (max-width: 768px) {
+  .industry {
+    padding: 40px 30px;
+  }
+
+  .industry-header h1 {
+    font-size: 32px;
+  }
+
+  .industry-tabs {
+    padding: 16px 12px;
+  }
+
+  .industry-tab .icon {
+    width: 36px;
+    height: 36px;
+    font-size: 16px;
+  }
+}
+
+/* Mobile (up to 600px) */
+@media (max-width: 600px) {
+  .industry {
+    padding: 30px 20px;
+  }
+
+  .industry-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .industry-header button {
+    align-self: stretch;
+    text-align: center;
+  }
+
+  .industry-header h1 {
+    font-size: 28px;
+  }
+
+  .industry-tabs {
+    gap: 8px;
+    padding: 12px 8px;
+  }
+
+  .industry-tab {
+    min-width: 70px;
+  }
+
+  .industry-tab .icon {
+    width: 32px;
+    height: 32px;
+    font-size: 14px;
+  }
+
+  .industry-content {
+    grid-template-columns: 1fr; /* single column */
+    gap: 20px;
+  }
+
+  .industry-content h2 {
+    font-size: 26px;
+  }
+
+  .industry-content p {
+    font-size: 14px;
+  }
+}
+
+
