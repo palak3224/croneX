@@ -103,7 +103,9 @@ export default function IndustryContent({ active }) {
   return (
     <div className="industry-content">
       <div className="text">
-        <h2>{content.title}</h2>
+        <h2>
+          <span className="text-gradient-vertical">{content.title}</span>
+        </h2>
         <p>{content.desc}</p>
 
         <ul className="industry-points">
@@ -116,7 +118,9 @@ export default function IndustryContent({ active }) {
         </ul>
       </div>
 
-      <img src={content.image} alt={content.title} />
+      <div className="image-wrapper">
+        <img src={content.image} alt={content.title} />
+      </div>
     </div>
   );
 }

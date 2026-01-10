@@ -41,23 +41,12 @@ const Testimonials = () => {
                         </div>
                         <div className="spacer-large"></div>
                         <div className="home_testimonials_author-wrapper">
-                          <img
-                            src="https://cdn.prod.website-files.com/67eb571d0fe797071c2c2759/680e7ea062ee533af97d4e5a_SIEM%20(1).avif"
-                            loading="lazy"
-                            sizes="(max-width: 1080px) 100vw, 1080px"
-                            srcSet="
-                            https://cdn.prod.website-files.com/67eb571d0fe797071c2c2759/680e7ea062ee533af97d4e5a_SIEM%20(1)-p-500.avif  500w,
-                            https://cdn.prod.website-files.com/67eb571d0fe797071c2c2759/680e7ea062ee533af97d4e5a_SIEM%20(1).avif       1080w
-                          "
-                            alt=""
-                            className="home_testimonials_author-image"
-                          />
                           <div>
                             <div className="text-size-medium text-weight-semibold text-color-primary">
-                              Rajesh Kumar
+                              Neeraj Sharma
                             </div>
                             <div className="text-color-tertiary">
-                              CTO, FinTech Solutions Inc.
+                              Founder - AllignMF Investments
                             </div>
                           </div>
                         </div>
@@ -78,18 +67,12 @@ const Testimonials = () => {
                         </div>
                         <div className="spacer-large"></div>
                         <div className="home_testimonials_author-wrapper">
-                          <img
-                            src="https://cdn.prod.website-files.com/67eb571d0fe797071c2c2759/680bf2155b46385c0f6047a2_Greg%20Stewart.avif"
-                            loading="lazy"
-                            alt=""
-                            className="home_testimonials_author-image"
-                          />
                           <div>
                             <div className="text-size-medium text-weight-semibold text-color-primary">
-                              Priya Sharma
+                              Vaibhav Bhargav
                             </div>
                             <div className="text-color-tertiary">
-                              VP of Technology, Enterprise Corp
+                              Founder - Podium Systems
                             </div>
                           </div>
                         </div>
@@ -112,15 +95,12 @@ const Testimonials = () => {
                         </div>
                         <div className="spacer-xlarge"></div>
                         <div className="testimonials_comany_text_wrap">
-                          <img
-                            src="https://cdn.prod.website-files.com/67eb571d0fe797071c2c2759/67f3921505670d6f3ac93321_Slack.avif"
-                            loading="lazy"
-                            alt=""
-                            className="home_testimonails_logo hide"
-                          />
                           <div className="text-color-primary text-weight-medium">
-                            Amit Verma, Operations Manager
+                            Gourav Bhargav
                           </div>
+                          <div className="text-color-tertiary">
+                              Co Founder - BiggFund
+                            </div>
                         </div>
                         <div className="home_testimonials_gradient-2"></div>
                         <div className="home_testimonials_gradient-1"></div>
@@ -141,14 +121,11 @@ const Testimonials = () => {
                         </div>
                         <div className="spacer-xlarge"></div>
                         <div className="testimonials_comany_text_wrap">
-                          <img
-                            src="https://cdn.prod.website-files.com/67eb571d0fe797071c2c2759/67f3921505670d6f3ac93321_Slack.avif"
-                            loading="lazy"
-                            alt=""
-                            className="home_testimonails_logo hide"
-                          />
                           <div className="text-color-primary text-weight-medium">
-                            Sneha Patel, Product Director
+                            Govind Dixit
+                          </div>
+                          <div className="text-color-tertiary">
+                            Founder - Arthvidhi Investments
                           </div>
                         </div>
                         <div className="home_testimonials_gradient-2"></div>
@@ -167,22 +144,11 @@ const Testimonials = () => {
                         </div>
                         <div className="spacer-large"></div>
                         <div className="home_testimonials_author-wrapper">
-                          <img
-                            src="https://cdn.prod.website-files.com/67eb571d0fe797071c2c2759/680e7ea05378b7b440b5bcfd_SIEM%20(2).avif"
-                            loading="lazy"
-                            sizes="(max-width: 1080px) 100vw, 1080px"
-                            srcSet="
-                            https://cdn.prod.website-files.com/67eb571d0fe797071c2c2759/680e7ea05378b7b440b5bcfd_SIEM%20(2)-p-500.avif  500w,
-                            https://cdn.prod.website-files.com/67eb571d0fe797071c2c2759/680e7ea05378b7b440b5bcfd_SIEM%20(2).avif       1080w
-                          "
-                            alt=""
-                            className="home_testimonials_author-image"
-                          />
                           <div>
                             <div className="text-size-medium text-weight-semibold text-color-primary">
-                              Vikram Singh
+                              Bhavna Chourasiya
                             </div>
-                            <div className="text-color-tertiary">Chief Information Security Officer, SecureBank</div>
+                            <div className="text-color-tertiary">Co Founder - FourNest</div>
                           </div>
                         </div>
                         <div className="home_testimonials_gradient-2"></div>
@@ -199,17 +165,6 @@ const Testimonials = () => {
                         </div>
                         <div className="spacer-large"></div>
                         <div className="home_testimonials_author-wrapper">
-                          <img
-                            src="https://cdn.prod.website-files.com/67eb571d0fe797071c2c2759/680c060651c90e89d38ceba3_Travis%20Farral.avif"
-                            loading="lazy"
-                            sizes="(max-width: 800px) 100vw, 800px"
-                            srcSet="
-                            https://cdn.prod.website-files.com/67eb571d0fe797071c2c2759/680c060651c90e89d38ceba3_Travis%20Farral-p-500.avif 500w,
-                            https://cdn.prod.website-files.com/67eb571d0fe797071c2c2759/680c060651c90e89d38ceba3_Travis%20Farral.avif       800w
-                          "
-                            alt=""
-                            className="home_testimonials_author-image"
-                          />
                           <div>
                             <div className="text-size-medium text-weight-semibold text-color-primary">
                               Anik Desai

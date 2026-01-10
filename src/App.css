@@ -555,6 +555,139 @@ td {
   opacity: 1;
 }
 
+/* =========================
+   TESTIMONIALS - HORIZONTAL SCROLLABLE LAYOUT (ALL SCREEN SIZES)
+========================= */
+
+/* Main wrapper - single horizontal scrolling container */
+.home_testimonials_list-wrapper {
+  display: flex !important;
+  flex-direction: row !important;
+  gap: var(--_size---small);
+  overflow-x: auto !important;
+  overflow-y: hidden !important;
+  scroll-snap-type: x mandatory;
+  scrollbar-width: none; /* Firefox - hide scrollbar */
+  -ms-overflow-style: none; /* IE and Edge - hide scrollbar */
+  -webkit-overflow-scrolling: touch;
+  padding-bottom: var(--_size---small);
+  width: 100% !important;
+  max-width: 100% !important;
+  min-width: 0 !important;
+  /* Ensure content can overflow */
+  box-sizing: border-box;
+}
+
+/* Override no-scrollbar class - keep scrollbar hidden */
+.home_testimonials_list-wrapper.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+  overflow-x: auto !important;
+}
+
+/* Hide scrollbar for Chrome, Safari and Opera */
+.home_testimonials_list-wrapper::-webkit-scrollbar {
+  display: none !important;
+  width: 0;
+  height: 0;
+}
+
+/* Both list containers become inline flex containers (no separate rows) */
+.home_testimonials_list.is-top,
+.home_testimonials_list.is-bottom,
+.home_testimonials_list {
+  display: flex !important;
+  flex-direction: row !important;
+  gap: var(--_size---small);
+  min-width: fit-content !important;
+  flex: none !important;
+  flex-shrink: 0 !important;
+  overflow: visible !important;
+  padding-bottom: 0;
+  width: auto !important;
+  max-width: none !important;
+}
+
+/* Individual testimonial cards - fixed widths based on screen size */
+.home_testimonials_item {
+  flex: none !important;
+  flex-shrink: 0 !important;
+  min-width: 0 !important;
+  scroll-snap-align: start;
+  scroll-snap-stop: always;
+  width: auto !important;
+}
+
+/* Ensure parent containers allow overflow */
+.section_home_testimonials,
+.section_home_testimonials .container-large,
+.section_home_testimonials .padding-global {
+  overflow: visible !important;
+}
+
+/* Desktop (1024px and above) - Cards are wider */
+@media screen and (min-width: 1024px) {
+  .home_testimonials_item {
+    width: 420px !important;
+    max-width: 420px !important;
+    min-width: 420px !important;
+  }
+  
+  .home_testimonials_list-wrapper {
+    gap: var(--_size---medium);
+    padding-bottom: var(--_size---medium);
+  }
+  
+  .home_testimonials_list.is-top,
+  .home_testimonials_list.is-bottom,
+  .home_testimonials_list {
+    gap: var(--_size---medium);
+  }
+}
+
+/* Tablet (768px - 1023px) - Medium width cards */
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  .home_testimonials_item {
+    width: 380px !important;
+    max-width: 380px !important;
+    min-width: 380px !important;
+  }
+  
+  .home_testimonials_list-wrapper {
+    gap: var(--_size---small);
+    padding-bottom: var(--_size---small);
+  }
+  
+  .home_testimonials_list.is-top,
+  .home_testimonials_list.is-bottom,
+  .home_testimonials_list {
+    gap: var(--_size---small);
+  }
+}
+
+/* Mobile (below 768px) - Keep existing mobile behavior with improvements */
+@media screen and (max-width: 767px) {
+  .home_testimonials_list-wrapper {
+    margin-left: -5vw;
+    margin-right: -5vw;
+    padding-left: 5vw;
+    padding-right: 5vw;
+    gap: var(--_size---xsmall);
+  }
+  
+  .home_testimonials_item {
+    width: 85vw !important;
+    min-width: 85vw !important;
+    flex: none !important;
+  }
+  
+  .home_testimonials_list.is-top,
+  .home_testimonials_list.is-bottom,
+  .home_testimonials_list {
+    gap: var(--_size---xsmall);
+  }
+}
+
 @keyframes light {
   from {
     width: 25rem;

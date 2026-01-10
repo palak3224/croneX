@@ -10,8 +10,9 @@ export default function IndustrySection() {
     <section className="industry">
       <div className="industry-header">
         <h1>
-          Industry-Leading Digital Solutions <br />
-          Tailored for Every Business
+          <span className="text-gradient-grey">Industry-Leading</span>{" "}
+          <span className="text-gradient-blue">Digital Solutions</span> <br />
+          <span className="text-gradient-grey">Tailored for Every Business</span>
         </h1>
         <button>Explore More In Industries →</button>
       </div>
