@@ -1,10 +1,11 @@
 import React from "react";
 import { NavLink, useParams } from "react-router-dom";
-import { ServiceData } from "../Data/ServiceData";
+import { SeaprateServiceData } from "../Data/SeaprateServiceData";
+// import { ServiceData } from "../Data/ServiceData";
 
 const ServiceDetails = () => {
   const { slug } = useParams();
-  const service = ServiceData.find((b) => b.slug === slug);
+  const service = SeaprateServiceData.find((b) => b.slug === slug);
 
   if (!service) {
     return <h2>Service not found!</h2>;
@@ -82,6 +83,24 @@ const ServiceDetails = () => {
                       >
                         {service.content}
                       </p>
+                        <p style={{ fontSize : "20px", marginTop : "20px", fontWeight : "800" }}>What We Offer</p>
+                        <div style={{marginLeft:"15px"}}>
+                          {service.whatWeOffer.map((bullet, index) => (
+                            <li key={index}>
+                              <span style={{ fontSize: "14px" }}>
+                                {bullet}
+                              </span>
+                            </li>
+                          ))}
+                        </div>
+
+                        <p style={{ fontSize : "20px", marginTop : "30px", fontWeight : "800" }}>{service.descriptionTitle}</p>
+                        <div style={{marginTop : "10px"}}>
+                          {service.description}
+                        </div>
+
+
+
                       <div className="spacer-large"></div>
                       <div
                         slide-in-header=""
