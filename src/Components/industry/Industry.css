@@ -104,9 +104,9 @@
   justify-content:space-around;
   background: rgba(255, 255, 255, 0.05);
   border: 1px solid var(--_primitives---colors--neutral-20);
-  padding: var(--_size---small) var(--_size---medium);
+  padding: var(--_size---1-25rem);
   border-radius: var(--_size---small);
-  margin-bottom: var(--_size---xlarge);
+  margin-bottom: var(--_size---small);
   gap: var(--_size---0-75rem);
   overflow-x: auto;
   overflow-y: hidden;
@@ -361,7 +361,7 @@
   }
 
   .industry-box {
-    padding: var(--_size---large);
+    /* padding: var(--_size---medium); */
   }
 
   .industry-content {
@@ -421,7 +421,7 @@
   }
 
   .industry-box {
-    padding: var(--_size---medium);
+    /* padding: var(--_size---medium); */
   }
 
   .industry-tabs {

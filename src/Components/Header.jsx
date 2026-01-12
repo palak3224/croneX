@@ -1,8 +1,83 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { mainLogo } from "../Components/Image";
-import { NavLink } from "react-router-dom";
+import { NavLink, useLocation } from "react-router-dom";
 
 const Header = () => {
+  const location = useLocation();
+
+  // Function to close dropdown and mobile menu
+  const closeDropdownAndMenu = () => {
+    // Check if we're on mobile (menu button is visible)
+    const isMobile = window.innerWidth <= 991; // matches data-collapse="medium"
+    
+    if (isMobile) {
+      // Mobile: Force close hamburger menu using multiple methods
+      const navButton = document.querySelector('.navbar_menu-button.w-nav-button');
+      const navMenu = document.querySelector('.navbar_menu.w-nav-menu');
+      
+      // Check if menu is open before closing
+      const isMenuOpen = navMenu && navMenu.classList.contains('w--open');
+      const isButtonOpen = navButton && navButton.classList.contains('w--open');
+      
+      if (isMenuOpen || isButtonOpen) {
+        // Method 1: Click the button (Webflow's preferred way)
+        if (navButton && isButtonOpen) {
+          navButton.click();
+        }
+        
+        // Method 2: Remove classes directly (backup method)
+        if (navMenu) {
+          navMenu.classList.remove('w--open');
+        }
+        if (navButton) {
+          navButton.classList.remove('w--open');
+        }
+        
+        // Method 3: Close dropdown list
+        const dropdownList = document.querySelector('.navbar_dropdown-list.w--open');
+        if (dropdownList) {
+          dropdownList.classList.remove('w--open');
+        }
+        
+        // Method 4: Double-check after a short delay to ensure it's closed
+        setTimeout(() => {
+          if (navMenu && navMenu.classList.contains('w--open')) {
+            navMenu.classList.remove('w--open');
+          }
+          if (navButton && navButton.classList.contains('w--open')) {
+            navButton.classList.remove('w--open');
+          }
+        }, 150);
+      }
+    } else {
+      // Desktop: Close dropdown and reset hover state properly
+      const dropdown = document.querySelector('.navbar_menu-dropdown.w-dropdown');
+      const dropdownList = document.querySelector('.navbar_dropdown-list.w--open');
+      
+      if (dropdownList) {
+        dropdownList.classList.remove('w--open');
+      }
+      
+      // Reset hover state by triggering mouseleave on the dropdown container
+      if (dropdown) {
+        // Use a small delay to ensure the class is removed first
+        setTimeout(() => {
+          const mouseLeaveEvent = new MouseEvent('mouseleave', {
+            bubbles: true,
+            cancelable: true,
+            view: window
+          });
+          dropdown.dispatchEvent(mouseLeaveEvent);
+        }, 50);
+      }
+    }
+  };
+
+  // Close dropdown/menu when route changes
+  useEffect(() => {
+    closeDropdownAndMenu();
+  }, [location.pathname]);
+
   return (
     <>
       <div
@@ -170,6 +245,7 @@ const Header = () => {
                         <NavLink
                           to="/service/web-app-development"
                           className="navbar_dropdown-link w-inline-block"
+                          onClick={closeDropdownAndMenu}
                         >
                           <div className="navbar_icon-wrapper">
                             <div className="icon-embed-xsmall w-embed">
@@ -216,6 +292,7 @@ const Header = () => {
                         <NavLink
                           to="/service/app-development"
                           className="navbar_dropdown-link w-inline-block"
+                          onClick={closeDropdownAndMenu}
                         >
                           <div className="navbar_icon-wrapper">
                             <div className="icon-embed-xsmall w-embed">
@@ -262,6 +339,7 @@ const Header = () => {
                         <NavLink
                           to="/service/custom-software-development"
                           className="navbar_dropdown-link w-inline-block"
+                          onClick={closeDropdownAndMenu}
                         >
                           <div className="navbar_icon-wrapper">
                             <div className="icon-embed-xsmall w-embed">
@@ -309,6 +387,7 @@ const Header = () => {
                         <NavLink
                           to="/service/branding-solution"
                           className="navbar_dropdown-link w-inline-block"
+                          onClick={closeDropdownAndMenu}
                         >
                           <div className="navbar_icon-wrapper">
                             <div className="icon-embed-xsmall w-embed">
@@ -353,6 +432,7 @@ const Header = () => {
                         <NavLink
                           to="/service/it-services"
                           className="navbar_dropdown-link w-inline-block"
+                          onClick={closeDropdownAndMenu}
                         >
                           <div className="navbar_icon-wrapper">
                             <div className="icon-embed-xsmall w-embed">
@@ -399,6 +479,7 @@ const Header = () => {
                         <NavLink
                           to="/service/other-services"
                           className="navbar_dropdown-link w-inline-block"
+                          onClick={closeDropdownAndMenu}
                         >
                           <div className="navbar_icon-wrapper">
                             <div className="icon-embed-xsmall w-embed">

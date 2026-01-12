@@ -766,7 +766,7 @@ const Home = () => {
           <Achievements />
           <IndustrySection/>
           {/* <CaseStudyComonent /> */}
-          <UseCases/>
+          {/* <UseCases/> */}
           <Testimonials/>
 
           {/* <section className="section_home_testimonials">

@@ -11,11 +11,13 @@ import TermsCondition from "./Pages/TermsCondition";
 import ProvacyPolicy from './Pages/ProvacyPolicy';
 import ScrollToTop from "./Components/ScrollToTop";
 import Pricing from "./Pages/Pricing";
+import WhatsAppButton from "./Components/WhatsAppButton";
 
 const App = () => {
   return (
     <>
       <ScrollToTop />
+      <WhatsAppButton />
       <div className="page-wrapper">
         <div className="global-styles">
           <div className="style-overrides w-embed"></div>
