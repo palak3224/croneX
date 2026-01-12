@@ -1,4 +1,6 @@
 import React from 'react'
+import untitled from "../assets/images/man.png";
+
 
 
 const PricingHeader = () => {
@@ -319,7 +321,7 @@ const PricingHeader = () => {
                               </div>
                             </div>
                             <img
-                              src={"https://devtechnosys.com/images/2023/calculate-it-project-cost/portrait-happy.png"}
+                              src={untitled}
                               loading="lazy"
                               slide-in-header=""
                               alt=""

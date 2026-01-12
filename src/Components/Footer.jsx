@@ -2,7 +2,6 @@ import { mainLogo } from "../Components/Image";
 import { NavLink } from "react-router-dom";
 
 const Footer = () => {
-
   return (
     <>
       <footer className="footer_component">
@@ -115,18 +114,6 @@ const Footer = () => {
 
                       <div className="footer_link-list">
                         <NavLink
-                          to="/service/finTech-specific"
-                          className="text-style-link text-weight-semibold text-color-primary"
-                        >
-                          FinTech-Specific
-                        </NavLink>
-                        <NavLink
-                          to="/service/software-development"
-                          className="text-style-link text-weight-semibold text-color-primary"
-                        >
-                          Software Dev
-                        </NavLink>
-                        <NavLink
                           to="service/web-app-development"
                           className="text-style-link text-weight-semibold text-color-primary"
                         >
@@ -134,41 +121,36 @@ const Footer = () => {
                         </NavLink>
 
                         <NavLink
-                          to="service/cloud-solutions"
+                          to="/service/branding-solution"
                           className="text-style-link text-weight-semibold text-color-primary"
                         >
-                          Cloud Solutions
+                          Branding Solutions
                         </NavLink>
                         <NavLink
-                          to="/service/cybersecurity"
+                          to="/service/it-services"
                           className="text-style-link text-weight-semibold text-color-primary"
                         >
-                          Cybersecurity
-                        </NavLink>
-                        <NavLink
-                          to="/service/digital-marketing"
-                          className="text-style-link text-weight-semibold text-color-primary"
-                        >
-                          Digital Marketing
+                          IT Services
                         </NavLink>
 
                         <NavLink
-                          to="/service/ai-services"
+                          to="/service/custom-software-development"
                           className="text-style-link text-weight-semibold text-color-primary"
                         >
-                          AI Services
+                          Custom Software Development
+                        </NavLink>
+
+                        <NavLink
+                          to="/service/app-development"
+                          className="text-style-link text-weight-semibold text-color-primary"
+                        >
+                          App Development
                         </NavLink>
                         <NavLink
-                          to="/service/salesforce-development"
+                          to="/service/other-services"
                           className="text-style-link text-weight-semibold text-color-primary"
                         >
-                          Salesforce
-                        </NavLink>
-                        <NavLink
-                          to="/service/zoho-development"
-                          className="text-style-link text-weight-semibold text-color-primary"
-                        >
-                          Zoho Development
+                          Other Services
                         </NavLink>
                       </div>
                     </div>
