@@ -20,7 +20,7 @@ import AboutComponent from "../Components/About";
 import Achievements from "../Components/Achievements";
 import Service from "../Components/Service";
 import CaseStudyComonent from "../Components/CaseStudy";
-import UseCases from './../Components/UseCases';
+import UseCases from "./../Components/UseCases";
 import IndustrySection from "../Components/industry/IndustrySection";
 import Testimonials from "./Testimonials";
 
@@ -346,13 +346,18 @@ const Home = () => {
                           </h1>
                           <div className="spacer-small"></div>
                           <p slide-in-header="" className="text-size-medium">
-                            croneX Tech is a global IT solutions company creating high-performance, secure, and scalable software. We help startups and enterprises unlock growth through innovation, automation, and next-generation technologies.
+                            croneX Tech is a global IT solutions company
+                            creating high-performance, secure, and scalable
+                            software. We help startups and enterprises unlock
+                            growth through innovation, automation, and
+                            next-generation technologies.
                           </p>
                           <div className="spacer-medium"></div>
                           <div slide-in-header="" className="button-group">
                             <NavLink
                               data-wf--button-primary--variant="base"
-                              to="/service/finTech-specific"
+                              to="/service/web-app-development" // or "/service/:slug" dynamically
+                              state={{ openDropdown: true }}
                               className="button-primary w-inline-block"
                             >
                               <div className="button_content">
@@ -730,11 +735,15 @@ const Home = () => {
                         <div>
                           <p className="text-size-large">
                             croneX Tech is a forward-thinking IT solutions
-                            company delivering advanced Software Development, Cloud Engineering, AI-driven platforms, and
-                            Digital Transformation services to global
-                            enterprises. With deep expertise across enterprise systems, data-intensive applications, and
-                            mission-critical infrastructure, we design and build secure, scalable,
-                            and high-performance digital ecosystems that enable innovation, operational efficiency, and sustainable business growth.
+                            company delivering advanced Software Development,
+                            Cloud Engineering, AI-driven platforms, and Digital
+                            Transformation services to global enterprises. With
+                            deep expertise across enterprise systems,
+                            data-intensive applications, and mission-critical
+                            infrastructure, we design and build secure,
+                            scalable, and high-performance digital ecosystems
+                            that enable innovation, operational efficiency, and
+                            sustainable business growth.
                           </p>
                         </div>
                       </div>
@@ -764,10 +773,10 @@ const Home = () => {
           <AboutComponent />
           <Service />
           <Achievements />
-          <IndustrySection/>
+          <IndustrySection />
           {/* <CaseStudyComonent /> */}
           {/* <UseCases/> */}
-          <Testimonials/>
+          <Testimonials />
 
           {/* <section className="section_home_testimonials">
             <div className="padding-global">
@@ -1596,7 +1605,7 @@ const Home = () => {
                           <div className="spacer-small"></div>
                           <h2 slide-in="" className="heading-style-h2">
                             <span className="text-gradient-grey">
-                              Our Brands & 
+                              Our Brands &
                             </span>
                             <br></br>{" "}
                             <span className="text-gradient-blue">
@@ -1609,7 +1618,12 @@ const Home = () => {
                               slide-in=""
                               className="text-size-large text-color-secondary"
                             >
-                              We work alongside innovative brands and strategic partners who share our vision for excellence and digital transformation. These associations strengthen our capabilities, expand our reach, and help us deliver world-class IT and FinTech solutions to businesses worldwide.
+                              We work alongside innovative brands and strategic
+                              partners who share our vision for excellence and
+                              digital transformation. These associations
+                              strengthen our capabilities, expand our reach, and
+                              help us deliver world-class IT and FinTech
+                              solutions to businesses worldwide.
                             </p>
                           </div>
                         </div>
@@ -9657,7 +9671,11 @@ const Home = () => {
                               <AccordionDetails className="faq_answer">
                                 <div className="spacer-small"></div>
                                 <p className="text-color-secondary">
-                                 croneX Tech offers end-to-end IT solutions including custom software development, FinTech solutions, web and mobile application development, AI-powered automation, and cloud-based enterprise systems.
+                                  croneX Tech offers end-to-end IT solutions
+                                  including custom software development, FinTech
+                                  solutions, web and mobile application
+                                  development, AI-powered automation, and
+                                  cloud-based enterprise systems.
                                 </p>
                               </AccordionDetails>
                             </Accordion>
@@ -9671,7 +9689,8 @@ const Home = () => {
                                 <Typography component="span">
                                   <div className="faq_question-content">
                                     <h3 className="text-size-large">
-                                      Does croneX Tech specialize in FinTech solutions?
+                                      Does croneX Tech specialize in FinTech
+                                      solutions?
                                       <br />
                                     </h3>
                                     <div className="faq_icon-wrappper">
@@ -9701,7 +9720,11 @@ const Home = () => {
                               <AccordionDetails className="faq_answer">
                                 <div className="spacer-small"></div>
                                 <p className="text-color-secondary">
-                                 Yes. We have strong expertise in building secure, scalable, and compliant FinTech platforms such as payment systems, digital wallets, financial dashboards, and enterprise financial software.
+                                  Yes. We have strong expertise in building
+                                  secure, scalable, and compliant FinTech
+                                  platforms such as payment systems, digital
+                                  wallets, financial dashboards, and enterprise
+                                  financial software.
                                 </p>
                               </AccordionDetails>
                             </Accordion>
@@ -9714,7 +9737,8 @@ const Home = () => {
                                 <Typography component="span">
                                   <div className="faq_question-content">
                                     <h3 className="text-size-large">
-                                      Do you work with startups as well as large enterprises?
+                                      Do you work with startups as well as large
+                                      enterprises?
                                       <br />
                                     </h3>
                                     <div className="faq_icon-wrappper">
@@ -9744,7 +9768,10 @@ const Home = () => {
                               <AccordionDetails className="faq_answer">
                                 <div className="spacer-small"></div>
                                 <p className="text-color-secondary">
-                                 Absolutely. We work with startups, growing businesses, and large enterprises, providing flexible and scalable technology solutions tailored to each stage of growth.
+                                  Absolutely. We work with startups, growing
+                                  businesses, and large enterprises, providing
+                                  flexible and scalable technology solutions
+                                  tailored to each stage of growth.
                                 </p>
                               </AccordionDetails>
                             </Accordion>
@@ -10627,7 +10654,7 @@ const Home = () => {
                               Ready to accelerate towards{" "}
                             </span>
                             <span className="text-gradient-blue">
-                             Innovation.
+                              Innovation.
                             </span>
                           </h2>
                           <div className="spacer-small"></div>

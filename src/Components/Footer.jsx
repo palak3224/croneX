@@ -117,14 +117,25 @@ const Footer = () => {
                           to="service/web-app-development"
                           className="text-style-link text-weight-semibold text-color-primary"
                         >
-                          Web Application
+                          Web Development
                         </NavLink>
-
+                        <NavLink
+                          to="/service/app-development"
+                          className="text-style-link text-weight-semibold text-color-primary"
+                        >
+                          App Development
+                        </NavLink>
+                        <NavLink
+                          to="/service/custom-software-development"
+                          className="text-style-link text-weight-semibold text-color-primary"
+                        >
+                          Custom Software Development
+                        </NavLink>
                         <NavLink
                           to="/service/branding-solution"
                           className="text-style-link text-weight-semibold text-color-primary"
                         >
-                          Branding Solutions
+                          Branding Solution
                         </NavLink>
                         <NavLink
                           to="/service/it-services"
@@ -133,19 +144,6 @@ const Footer = () => {
                           IT Services
                         </NavLink>
 
-                        <NavLink
-                          to="/service/custom-software-development"
-                          className="text-style-link text-weight-semibold text-color-primary"
-                        >
-                          Custom Software Development
-                        </NavLink>
-
-                        <NavLink
-                          to="/service/app-development"
-                          className="text-style-link text-weight-semibold text-color-primary"
-                        >
-                          App Development
-                        </NavLink>
                         <NavLink
                           to="/service/other-services"
                           className="text-style-link text-weight-semibold text-color-primary"

@@ -1,6 +1,7 @@
 import { useState } from "react";
 import IndustryTabs from "./IndustryTabs";
 import IndustryContent from "./IndustryContent";
+import { NavLink } from "react-router-dom";
 import "./Industry.css";
 
 export default function IndustrySection() {
@@ -12,9 +13,13 @@ export default function IndustrySection() {
         <h1>
           <span className="text-gradient-grey">Industry-Leading</span>{" "}
           <span className="text-gradient-blue">Digital Solutions</span> <br />
-          <span className="text-gradient-grey">Tailored for Every Business</span>
+          <span className="text-gradient-grey">
+            Tailored for Every Business
+          </span>
         </h1>
-        <button>Explore More In Industries →</button>
+        <NavLink to="/projects">
+          <button>Explore More In Industries →</button>
+        </NavLink>
       </div>
 
       {/* Background behind navbar + content */}
