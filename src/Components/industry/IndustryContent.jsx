@@ -8,7 +8,7 @@ const industryData = {
       "Payment Gateway Solutions",
       "Cryptocurrency & Blockchain Development",
     ],
-    image: "https://devtechnosys.com/assets/images/home/industry01.webp",
+    image: "https://www.smartosc.com/wp-content/uploads/2024/02/fintech-apps-01-e1707126719700.png",
   },
 
   Healthcare: {

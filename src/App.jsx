@@ -12,6 +12,7 @@ import ProvacyPolicy from './Pages/ProvacyPolicy';
 import ScrollToTop from "./Components/ScrollToTop";
 import Pricing from "./Pages/Pricing";
 import WhatsAppButton from "./Components/WhatsAppButton";
+import FintechSolutions from "./Pages/FintechSolutions";
 
 const App = () => {
   return (
@@ -32,6 +33,7 @@ const App = () => {
           <Route element={<Project />} path="/projects" />
           <Route element={<Contact />} path="/contact" />
           <Route element={<Pricing />} path="/pricing" />
+          <Route element={<FintechSolutions />} path="/fintech-solutions" />
           {/* <Route element={<Blog />} path="/blogs" /> */}
           <Route element={<TermsCondition />} path="/terms-condition" />
           <Route element={<ProvacyPolicy />} path="/privacy-policy" />

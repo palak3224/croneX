@@ -16,7 +16,7 @@ import AccordionDetails from "@mui/material/AccordionDetails";
 import Typography from "@mui/material/Typography";
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
 import Button from "@mui/material/Button";
-import AboutComponent from "../Components/About";
+import FintechSolution from "../Components/FintechSolution";
 import Achievements from "../Components/Achievements";
 import Service from "../Components/Service";
 import CaseStudyComonent from "../Components/CaseStudy";
@@ -770,7 +770,7 @@ const Home = () => {
             </div>
           </section>
 
-          {/* <AboutComponent /> */}
+          <FintechSolution />
           <Service />
           <Achievements />
           <IndustrySection />
