@@ -770,7 +770,7 @@ const Home = () => {
             </div>
           </section>
 
-          <AboutComponent />
+          {/* <AboutComponent /> */}
           <Service />
           <Achievements />
           <IndustrySection />
