@@ -1,4 +1,5 @@
 import React from "react";
+import { NavLink } from "react-router-dom";
 import * as MuiIcons from "@mui/icons-material";
 
 const tabs = [
@@ -17,6 +18,25 @@ export default function IndustryTabs({ active, setActive }) {
     <div className="industry-tabs">
       {tabs.map((tab) => {
         const IconComponent = MuiIcons[tab.icon];
+
+        // If the tab is Finance, wrap it with NavLink
+        if (tab.name === "Finance") {
+          return (
+            <NavLink
+              key={tab.name}
+              to="/contact"
+              className={`industry-tab ${active === tab.name ? "active" : ""}`}
+              onClick={() => setActive(tab.name)}
+            >
+              <div className="icon">
+                {IconComponent && <IconComponent fontSize="medium" />}
+              </div>
+              <span>{tab.name}</span>
+            </NavLink>
+          );
+        }
+
+        // Other tabs just update active state
         return (
           <div
             key={tab.name}

@@ -23,6 +23,7 @@ import CaseStudyComonent from "../Components/CaseStudy";
 import UseCases from "./../Components/UseCases";
 import IndustrySection from "../Components/industry/IndustrySection";
 import Testimonials from "./Testimonials";
+import AISection from "../Components/AISection/AISection";
 
 const Home = () => {
   return (
@@ -770,6 +771,7 @@ const Home = () => {
             </div>
           </section>
 
+          <AISection />
           <FintechSolution />
           <Service />
           <Achievements />

@@ -1,0 +1,139 @@
+.ai-section {
+  padding: 130px 0;
+  background: linear-gradient(to bottom, #060b14, #040812);
+  color: #ffffff;
+  position: relative;
+  overflow: hidden;
+}
+
+.ai-container {
+  max-width: 1200px;
+  margin: auto;
+  padding: 0 24px;
+}
+
+.ai-title {
+  text-align: center;
+  font-size: 58px;
+  font-weight: 700;
+  background: linear-gradient(90deg, #60a5fa, #22d3ee);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.ai-subtitle {
+  text-align: center;
+  max-width: 760px;
+  margin: 18px auto 0;
+  color: #9caaafe8;
+  font-size: 1.25rem;
+}
+
+.ai-grid {
+  margin-top: 70px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 40px;
+}
+
+/* ================= CARD ================= */
+
+.ai-card {
+  background: rgba(255, 255, 255, 0.04);
+  backdrop-filter: blur(12px);
+  border-radius: 22px;
+  padding: 36px 32px;
+  position: relative;
+  overflow: hidden;
+  transition: transform 0.35s ease;
+}
+
+/* subtle border */
+.ai-card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 22px;
+  padding: 1px;
+  background: linear-gradient(
+    135deg,
+    transparent,
+    rgba(255, 255, 255, 0.25),
+    transparent
+  );
+  -webkit-mask: linear-gradient(#000 0 0) content-box,
+    linear-gradient(#000 0 0);
+  -webkit-mask-composite: xor;
+}
+
+/* LEFT + RIGHT SMOKE LINES */
+.ai-card::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(
+      to bottom,
+      transparent,
+      rgba(255, 255, 255, 0.65),
+      transparent
+    ) left / 3px 76% no-repeat,
+    linear-gradient(
+      to bottom,
+      transparent,
+      rgba(255, 255, 255, 0.65),
+      transparent
+    ) right / 3px 76% no-repeat;
+  filter: blur(2px);
+  opacity: 0;
+  transition: opacity 0.35s ease;
+}
+
+/* hover */
+.ai-card:hover {
+  transform: translateY(-8px);
+}
+
+.ai-card:hover::after {
+  opacity: 1;
+}
+
+/* ================= ICON ================= */
+
+.ai-icon {
+  font-size: 42px;
+  opacity: 0.65;
+  transition: all 0.35s ease;
+}
+
+.ai-card:hover .ai-icon {
+  opacity: 1;
+  transform: scale(1.05);
+  filter: drop-shadow(0 0 12px currentColor);
+}
+
+/* ================= TEXT ================= */
+
+.ai-card h3 {
+  margin-top: 18px;
+  font-size: 22px;
+}
+
+.ai-card p {
+  margin-top: 12px;
+  font-size: 14px;
+  color: #9ca3af;
+  line-height: 1.7;
+}
+
+/* ================= ICON COLORS ================= */
+
+.glow-blue .ai-icon {
+  color: #60a5fa;
+}
+.glow-cyan .ai-icon {
+  color: #22d3ee;
+}
+.glow-purple .ai-icon {
+  color: #a855f7;
+}

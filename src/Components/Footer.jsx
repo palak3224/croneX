@@ -178,6 +178,12 @@ const Footer = () => {
                         >
                           Projects
                         </NavLink>
+                        <NavLink
+                          to="/pricing"
+                          className="text-style-link text-weight-semibold text-color-primary"
+                        >
+                          Pricing
+                        </NavLink>
                         {/* <NavLink
                           to="/blogs"
                           className="text-style-link text-weight-semibold text-color-primary"

@@ -35,20 +35,6 @@ const ServiceDetails = () => {
                 <div className="padding-section-small">
                   <div className="w-layout-grid header_content _1-5-1">
                     <div className="header_content-left">
-                      <div
-                        slide-in-header=""
-                        className="tag"
-                        style={{
-                          opacity: 1,
-                          visibility: "inherit",
-                          translate: "none",
-                          rotate: "none",
-                          scale: "none",
-                          transform: "translate(0px, 0px)",
-                        }}
-                      >
-                        FinTech
-                      </div>
                       <div className="spacer-1-25rem"></div>
                       <h1
                         slide-in-header=""
