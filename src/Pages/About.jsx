@@ -2,6 +2,7 @@ import React from "react";
 import { AboutImg, HomeVid3 } from "../Components/Image";
 import AboutComponent from "../Components/About";
 import Achievements from "../Components/Achievements";
+import TechStack from "../Components/TechStack/TechStack";
 
 const About = () => {
   return (
@@ -228,6 +229,7 @@ const About = () => {
         </header>
 
         <AboutComponent />
+        <TechStack/>
         <Achievements />
       </main>
     </>

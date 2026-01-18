@@ -1,9 +1,7 @@
 .ai-section {
   padding: 130px 0;
   background: linear-gradient(to bottom, #060b14, #040812);
-  color: #ffffff;
-  position: relative;
-  overflow: hidden;
+  min-height: 100vh;
 }
 
 .ai-container {
@@ -16,7 +14,7 @@
   text-align: center;
   font-size: 58px;
   font-weight: 700;
-  background: linear-gradient(90deg, #60a5fa, #22d3ee);
+  background: linear-gradient(90deg, #ffd166,#22c55e, #60a5fa, #22d3ee);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
@@ -25,12 +23,14 @@
   text-align: center;
   max-width: 760px;
   margin: 18px auto 0;
-  color: #9caaafe8;
-  font-size: 1.25rem;
+  color: #9ca3af;
+  font-size: 1.2rem;
 }
 
+/* ================= GRID ================= */
+
 .ai-grid {
-  margin-top: 70px;
+  margin-top: 80px;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   gap: 40px;
@@ -39,101 +39,92 @@
 /* ================= CARD ================= */
 
 .ai-card {
-  background: rgba(255, 255, 255, 0.04);
-  backdrop-filter: blur(12px);
-  border-radius: 22px;
-  padding: 36px 32px;
   position: relative;
+  padding: 36px 32px;
+  border-radius: 22px;
+  background: transparent;
   overflow: hidden;
+  z-index: 1;
   transition: transform 0.35s ease;
 }
 
-/* subtle border */
+/* ROTATING PARTIAL BORDER */
 .ai-card::before {
   content: "";
   position: absolute;
-  inset: 0;
+  inset: -2px;
   border-radius: 22px;
-  padding: 1px;
-  background: linear-gradient(
-    135deg,
-    transparent,
-    rgba(255, 255, 255, 0.25),
-    transparent
+
+  background: conic-gradient(
+    from 0deg,
+    transparent 0deg,
+    #ff0080 70deg,
+    #7c3aed 120deg,
+    transparent 180deg,
+    transparent 240deg,
+    #22d3ee 300deg,
+    transparent 360deg
   );
-  -webkit-mask: linear-gradient(#000 0 0) content-box,
-    linear-gradient(#000 0 0);
-  -webkit-mask-composite: xor;
+
+  animation: rotateBorder 5s linear infinite;
 }
 
-/* LEFT + RIGHT SMOKE LINES */
+/* CUT CENTER (ONLY BORDER VISIBLE) */
 .ai-card::after {
   content: "";
   position: absolute;
-  inset: 0;
-  background:
-    linear-gradient(
-      to bottom,
-      transparent,
-      rgba(255, 255, 255, 0.65),
-      transparent
-    ) left / 3px 76% no-repeat,
-    linear-gradient(
-      to bottom,
-      transparent,
-      rgba(255, 255, 255, 0.65),
-      transparent
-    ) right / 3px 76% no-repeat;
-  filter: blur(2px);
-  opacity: 0;
-  transition: opacity 0.35s ease;
+  inset: 2px;
+  background: #060b14;
+  border-radius: 20px;
+  z-index: 1;
+}
+
+/* CONTENT ABOVE BORDER */
+.ai-card > * {
+  position: relative;
+  z-index: 2;
 }
 
 /* hover */
 .ai-card:hover {
-  transform: translateY(-8px);
-}
-
-.ai-card:hover::after {
-  opacity: 1;
+  transform: translateY(-10px);
 }
 
 /* ================= ICON ================= */
 
 .ai-icon {
   font-size: 42px;
-  opacity: 0.65;
-  transition: all 0.35s ease;
+  opacity: 0.7;
+  margin-bottom: 16px;
+  transition: all 0.3s ease;
 }
 
 .ai-card:hover .ai-icon {
   opacity: 1;
   transform: scale(1.05);
-  filter: drop-shadow(0 0 12px currentColor);
 }
 
 /* ================= TEXT ================= */
 
 .ai-card h3 {
-  margin-top: 18px;
   font-size: 22px;
+  margin-bottom: 10px;
+  color: #ffffff;
 }
 
 .ai-card p {
-  margin-top: 12px;
   font-size: 14px;
-  color: #9ca3af;
   line-height: 1.7;
+  color: #9ca3af;
 }
 
-/* ================= ICON COLORS ================= */
+/* ================= ANIMATION ================= */
 
-.glow-blue .ai-icon {
-  color: #60a5fa;
-}
-.glow-cyan .ai-icon {
-  color: #22d3ee;
-}
-.glow-purple .ai-icon {
-  color: #a855f7;
+@keyframes rotateBorder {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
 }
