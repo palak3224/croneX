@@ -1,7 +1,5 @@
 import { memo } from "react";
 
-import { memo } from "react";
-
 const industryData = {
   Finance: {
     title: "Fintech App Development",

@@ -34,3 +34,5 @@ function IndustryTabs({ active, setActive }) {
     </div>
   );
 }
+
+export default memo(IndustryTabs);
