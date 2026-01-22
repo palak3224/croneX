@@ -4,6 +4,8 @@ import Footer from "./Components/Footer";
 import { Route, Routes } from "react-router-dom";
 import ScrollToTop from "./Components/ScrollToTop";
 import WhatsAppButton from "./Components/WhatsAppButton";
+import { mainLogo } from "./Components/Image";
+import "./App.css";
 
 // Lazy load pages for code splitting
 const Home = lazy(() => import("./Pages/Home"));
@@ -16,15 +18,21 @@ const ProvacyPolicy = lazy(() => import('./Pages/ProvacyPolicy'));
 const Pricing = lazy(() => import("./Pages/Pricing"));
 const FintechSolutions = lazy(() => import("./Pages/FintechSolutions"));
 
-// Loading fallback component
+// Loading fallback component with logo and animation
 const PageLoader = () => (
-  <div style={{ 
-    display: 'flex', 
-    justifyContent: 'center', 
-    alignItems: 'center', 
-    minHeight: '50vh' 
-  }}>
-    <div>Loading...</div>
+  <div className="page-loader">
+    <div className="page-loader-content">
+      <div className="page-loader-logo-wrapper">
+        <img 
+          src={mainLogo} 
+          alt="croneX Tech" 
+          className="page-loader-logo"
+          loading="eager"
+        />
+        <div className="page-loader-spinner"></div>
+      </div>
+      <div className="page-loader-text">Loading...</div>
+    </div>
   </div>
 );
 

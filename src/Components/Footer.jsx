@@ -1,3 +1,4 @@
+import { memo } from "react";
 import { mainLogo } from "../Components/Image";
 import { NavLink } from "react-router-dom";
 

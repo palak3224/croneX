@@ -163,29 +163,15 @@
     }
   </style>
 
-  <script>
-    export const metadata = {
-  title: "croneX Tech",
-  description: "croneX Tech",
-  openGraph: {
-    title: "croneX Tech",
-    description: "croneX Tech",
-    images: [
-      "./src/assets/images/previewImg.png"
-    ],
-    url: "#",
-    type: "croneX Tech",
-  },
-};
-  </script>
+  <!-- Metadata is handled via meta tags above, no need for JS export -->
 
   
 
 
-  <!-- GSAP - Defer loading -->
-  <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/gsap.min.js" defer></script>
-  <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/ScrollTrigger.min.js" defer></script>
-  <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/SplitText.min.js" defer></script>
+  <!-- GSAP - Load before other scripts -->
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/gsap.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/ScrollTrigger.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/SplitText.min.js"></script>
 
   <!-- Prevent GSAP animation flicker -->
 
@@ -238,12 +224,13 @@
 <body>
   <div id="root"></div>
   <script type="module" src="/src/main.jsx"></script>
-  <script src="./src/assets/ScrollTrigger.min.js" type="module" defer></script>
-  <script src="./src/assets/SplitText.min.js" type="module" defer></script>
-  <script src="./src/assets/gsap1.min.js" type="module" defer></script>
-  <script src="./src/assets/script1.js" type="module" defer></script>
-  <script src="./src/assets/script2.js" type="module" defer></script>
-  <script src="./src/assets/selectcustom.js" type="module" defer></script>
+  <!-- Local asset scripts - remove type="module" as they're not ES modules -->
+  <script src="./src/assets/ScrollTrigger.min.js"></script>
+  <script src="./src/assets/SplitText.min.js"></script>
+  <script src="./src/assets/gsap1.min.js"></script>
+  <script src="./src/assets/script1.js"></script>
+  <script src="./src/assets/script2.js"></script>
+  <script src="./src/assets/selectcustom.js"></script>
 
 
 
@@ -254,11 +241,12 @@
 
 
 
+  <!-- jQuery - Load before scripts that use $ -->
   <script src="https://d3e54v103j8qbb.cloudfront.net/js/jquery-3.5.1.min.dc5e7f18c8.js?site=67eb571d0fe797071c2c2759"
     type="text/javascript" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0="
-    crossorigin="anonymous" defer></script>
+    crossorigin="anonymous"></script>
   <script src="https://cdn.prod.website-files.com/67eb571d0fe797071c2c2759/js/databahn.a9ccbc99.f8aef03015fedcbd.js"
-    type="text/javascript" defer></script>
+    type="text/javascript"></script>
   <!-- Lenis Smooth Scroll - Defer -->
   <link rel="stylesheet" href="https://unpkg.com/lenis@1.3.1/dist/lenis.css" media="print" onload="this.media='all'" />
   <noscript><link rel="stylesheet" href="https://unpkg.com/lenis@1.3.1/dist/lenis.css" /></noscript>
@@ -311,94 +299,105 @@
     }
   </script>
 
-  <!-- GSAP -->
+  <!-- GSAP - Wait for GSAP to load -->
   <script>
-    document.addEventListener("DOMContentLoaded", (event) => {
-      gsap.registerPlugin(ScrollTrigger, SplitText);
-    });
+    function initGSAP() {
+      if (typeof gsap !== 'undefined' && typeof ScrollTrigger !== 'undefined' && typeof SplitText !== 'undefined') {
+        gsap.registerPlugin(ScrollTrigger, SplitText);
+
+        // Slide-In Animation
+        document.querySelectorAll("[slide-in]").forEach((element) => {
+          gsap.from(element, {
+            y: "2rem",
+            opacity: 0,
+            scrollTrigger: {
+              trigger: element,
+              start: "top bottom",
+            },
+          });
+        });
+
+        // Slide-In Header Animation
+        gsap.set("[slide-in-header]", { autoAlpha: 1 });
+        gsap.from("[slide-in-header]", {
+          y: "2rem",
+          opacity: 0,
+          stagger: 0.25,
+        });
+
+        // Reveal List Animation
+        document.querySelectorAll("[reveal-list]").forEach((list) => {
+          gsap.from(list.querySelectorAll("[reveal-item]"), {
+            scrollTrigger: {
+              trigger: list,
+              start: "top bottom",
+            },
+            opacity: 0,
+            y: "5rem",
+            stagger: 0.25,
+          });
+        });
+      } else {
+        setTimeout(initGSAP, 50);
+      }
+    }
+    document.addEventListener("DOMContentLoaded", initGSAP);
   </script>
 
-  <!-- Slide-In Animation -->
+  <!-- Arrow Animation - Wait for GSAP -->
   <script>
-    document.querySelectorAll("[slide-in]").forEach((element) => {
-      gsap.from(element, {
-        y: "2rem",
-        opacity: 0,
-        scrollTrigger: {
-          trigger: element,
-          start: "top bottom",
-        },
-      });
-    });
+    function initArrowAnimations() {
+      if (typeof gsap !== 'undefined') {
+        document.querySelectorAll(".arrow_svg").forEach((arrow) => {
+          const tl = gsap.timeline({ repeat: -1 });
+          tl.to(arrow.querySelectorAll("path"), {
+            opacity: 0,
+            stagger: 0.05,
+            ease: "power1.inOut",
+            duration: 0.25,
+          }).to(arrow.querySelectorAll("path"), {
+            opacity: 1,
+            stagger: 0.05,
+            ease: "power1.inOut",
+            duration: 0.25,
+          });
+        });
+        document.querySelectorAll(".slider-arrow").forEach((arrow) => {
+          const tl = gsap.timeline({ repeat: -1, paused: true });
+          tl.to(arrow.querySelectorAll("path"), {
+            opacity: 0,
+            stagger: 0.05,
+            ease: "power1.inOut",
+            duration: 0.25,
+          }).to(arrow.querySelectorAll("path"), {
+            opacity: 1,
+            stagger: 0.05,
+            ease: "power1.inOut",
+            duration: 0.25,
+          });
+          arrow.addEventListener("mouseenter", () => tl.play());
+          arrow.addEventListener("mouseleave", () => tl.pause(0));
+        });
+      } else {
+        setTimeout(initArrowAnimations, 50);
+      }
+    }
+    document.addEventListener("DOMContentLoaded", initArrowAnimations);
   </script>
 
-  <!-- Slide-In Header Animation -->
+  <!-- ScrollTrigger refresh on resizing - Wait for ScrollTrigger -->
   <script>
-    gsap.set("[slide-in-header]", { autoAlpha: 1 });
-    gsap.from("[slide-in-header]", {
-      y: "2rem",
-      opacity: 0,
-      stagger: 0.25,
-    });
-  </script>
-
-  <!-- Reveal List Animation -->
-  <script>
-    document.querySelectorAll("[reveal-list]").forEach((list) => {
-      gsap.from(list.querySelectorAll("[reveal-item]"), {
-        scrollTrigger: {
-          trigger: list,
-          start: "top bottom",
-        },
-        opacity: 0,
-        y: "5rem",
-        stagger: 0.25,
-      });
-    });
-  </script>
-
-  <!-- Arrow Animation -->
-  <script>
-    document.querySelectorAll(".arrow_svg").forEach((arrow) => {
-      const tl = gsap.timeline({ repeat: -1 });
-      tl.to(arrow.querySelectorAll("path"), {
-        opacity: 0,
-        stagger: 0.05,
-        ease: "power1.inOut",
-        duration: 0.25,
-      }).to(arrow.querySelectorAll("path"), {
-        opacity: 1,
-        stagger: 0.05,
-        ease: "power1.inOut",
-        duration: 0.25,
-      });
-    });
-  </script>
-  <script>
-    document.querySelectorAll(".slider-arrow").forEach((arrow) => {
-      const tl = gsap.timeline({ repeat: -1, paused: true });
-      tl.to(arrow.querySelectorAll("path"), {
-        opacity: 0,
-        stagger: 0.05,
-        ease: "power1.inOut",
-        duration: 0.25,
-      }).to(arrow.querySelectorAll("path"), {
-        opacity: 1,
-        stagger: 0.05,
-        ease: "power1.inOut",
-        duration: 0.25,
-      });
-      arrow.addEventListener("mouseenter", () => tl.play());
-      arrow.addEventListener("mouseleave", () => tl.pause(0));
-    });
-  </script>
-
-  <!-- ScrollTrigger refresh on resizing -->
-  <script>
-    const observer = new ResizeObserver(() => ScrollTrigger.refresh());
-    document
-      .querySelectorAll('[resize], [fs-accordion-element="content"]')
-      .forEach((el) => observer.observe(el));
+    function initScrollTriggerRefresh() {
+      if (typeof ScrollTrigger !== 'undefined') {
+        const observer = new ResizeObserver(() => ScrollTrigger.refresh());
+        document
+          .querySelectorAll('[resize], [fs-accordion-element="content"]')
+          .forEach((el) => observer.observe(el));
+      } else {
+        setTimeout(initScrollTriggerRefresh, 50);
+      }
+    }
+    document.addEventListener("DOMContentLoaded", initScrollTriggerRefresh);
   </script>
 
   <!-- Background Tiles Blink Animation -->
@@ -410,24 +409,35 @@
         element.style.opacity = shouldShow ? "1" : "0";
       }, randomInterval);
     }
-    document.querySelectorAll(".bg-tiles_image").forEach((element) => {
-      element.style.transition = "opacity 0.5s ease";
-      toggleElementOpacityIndividually(element);
+    document.addEventListener("DOMContentLoaded", function() {
+      document.querySelectorAll(".bg-tiles_image").forEach((element) => {
+        element.style.transition = "opacity 0.5s ease";
+        toggleElementOpacityIndividually(element);
+      });
     });
   </script>
 
-  <!-- Footer Copyright Year -->
+  <!-- Footer Copyright Year - Wait for jQuery -->
   <script>
-    $("[copyright-year]").text(new Date().getFullYear());
+    function initCopyrightYear() {
+      if (typeof $ !== 'undefined') {
+        $("[copyright-year]").text(new Date().getFullYear());
+      } else {
+        setTimeout(initCopyrightYear, 50);
+      }
+    }
+    document.addEventListener("DOMContentLoaded", initCopyrightYear);
   </script>
 
   <!-- Number formatting -->
   <script>
-    document.querySelectorAll("[number]").forEach(function (el) {
-      let num = parseFloat(el.textContent.replace(/[^0-9.-]+/g, ""));
-      if (!isNaN(num)) {
-        el.textContent = num.toLocaleString();
-      }
+    document.addEventListener("DOMContentLoaded", function() {
+      document.querySelectorAll("[number]").forEach(function (el) {
+        let num = parseFloat(el.textContent.replace(/[^0-9.-]+/g, ""));
+        if (!isNaN(num)) {
+          el.textContent = num.toLocaleString();
+        }
+      });
     });
   </script>
 
@@ -492,10 +502,10 @@ function handleExitIntent(e) {
     .catch(err => console.error("GeoIP fetch failed:", err));
 });
 </script>
--->  <!-- Typing Animation - Defer -->
-  <script src="https://unpkg.com/typewriter-effect@latest/dist/core.js" defer></script>
-  <script defer>
-    document.addEventListener('DOMContentLoaded', function() {
+-->  <!-- Typing Animation -->
+  <script src="https://unpkg.com/typewriter-effect@latest/dist/core.js"></script>
+  <script>
+    function initTypewriter() {
       if (typeof Typewriter !== 'undefined' && document.getElementById('typewriter')) {
         new Typewriter("#typewriter", {
           strings: ["security", "application", "IOT/OT", "observability"],
@@ -505,8 +515,11 @@ function handleExitIntent(e) {
           delay: 50,
           deleteSpeed: 50,
         });
+      } else {
+        setTimeout(initTypewriter, 50);
       }
-    });
+    }
+    document.addEventListener('DOMContentLoaded', initTypewriter);
   </script>
 
   <!-- Automatic Tab Switching - Defer -->
