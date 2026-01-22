@@ -1,4 +1,4 @@
-import React, { useState, useRef } from "react";
+import { useState, useRef, memo } from "react";
 import { useNavigate } from "react-router-dom";
 import "./AISection.css";
 
@@ -107,4 +107,4 @@ const AISection = () => {
   );
 };
 
-export default AISection;
+export default memo(AISection);

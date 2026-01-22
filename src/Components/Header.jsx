@@ -1,8 +1,8 @@
-import React, { useEffect } from "react";
+import { useEffect, memo } from "react";
 import { mainLogo } from "../Components/Image";
 import { NavLink, useLocation } from "react-router-dom";
 
-const Header = () => {
+const Header = memo(() => {
   const location = useLocation();
 
   // Function to close dropdown and mobile menu
@@ -810,6 +810,6 @@ const Header = () => {
       </div>
     </>
   );
-};
+});
 
 export default Header;

@@ -1,7 +1,7 @@
 import { mainLogo } from "../Components/Image";
 import { NavLink } from "react-router-dom";
 
-const Footer = () => {
+const Footer = memo(() => {
   return (
     <>
       <footer className="footer_component">
@@ -18,10 +18,13 @@ const Footer = () => {
                       >
                         <img
                           src={mainLogo}
-                          alt=""
-                          loading="lazy"
+                          alt="croneX Logo"
+                          loading="eager"
+                          fetchpriority="high"
                           sizes="(max-width: 1024px) 100vw, 1024px"
                           className="footer_logo"
+                          width="200"
+                          height="auto"
                         />
                       </NavLink>
 
@@ -254,6 +257,6 @@ const Footer = () => {
       </footer>
     </>
   );
-};
+});
 
 export default Footer;

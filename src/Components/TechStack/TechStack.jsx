@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState, memo, useMemo } from "react";
 import "./TechStack.css";
 import technologiesData from "../../Data/technologiesData.json";
 
@@ -288,4 +288,4 @@ const TechStack = () => {
   );
 };
 
-export default TechStack;
+export default memo(TechStack);

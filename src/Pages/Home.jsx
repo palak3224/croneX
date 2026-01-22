@@ -1,4 +1,4 @@
-import React from "react";
+// React import removed - not needed in React 17+
 import { NavLink } from "react-router-dom";
 import {
   heroImg,
@@ -468,10 +468,13 @@ const Home = () => {
                     </div>
                     <img
                       src={heroImg}
-                      loading="lazy"
+                      loading="eager"
+                      fetchpriority="high"
                       slide-in-header=""
-                      alt=""
+                      alt="Hero image"
                       className="home_header_image"
+                      width="585"
+                      height="585"
                     />
                   </div>
                 </div>

@@ -1,18 +1,32 @@
-import React from "react";
-import Home from "./Pages/Home";
-import About from "./Pages/About";
+import { lazy, Suspense } from "react";
 import Header from "./Components/Header";
 import Footer from "./Components/Footer";
 import { Route, Routes } from "react-router-dom";
-import ServiceDetails from "./Pages/ServiceDetails";
-import Project from './Pages/Project';
-import Contact from './Pages/Contact';
-import TermsCondition from "./Pages/TermsCondition";
-import ProvacyPolicy from './Pages/ProvacyPolicy';
 import ScrollToTop from "./Components/ScrollToTop";
-import Pricing from "./Pages/Pricing";
 import WhatsAppButton from "./Components/WhatsAppButton";
-import FintechSolutions from "./Pages/FintechSolutions";
+
+// Lazy load pages for code splitting
+const Home = lazy(() => import("./Pages/Home"));
+const About = lazy(() => import("./Pages/About"));
+const ServiceDetails = lazy(() => import("./Pages/ServiceDetails"));
+const Project = lazy(() => import('./Pages/Project'));
+const Contact = lazy(() => import('./Pages/Contact'));
+const TermsCondition = lazy(() => import("./Pages/TermsCondition"));
+const ProvacyPolicy = lazy(() => import('./Pages/ProvacyPolicy'));
+const Pricing = lazy(() => import("./Pages/Pricing"));
+const FintechSolutions = lazy(() => import("./Pages/FintechSolutions"));
+
+// Loading fallback component
+const PageLoader = () => (
+  <div style={{ 
+    display: 'flex', 
+    justifyContent: 'center', 
+    alignItems: 'center', 
+    minHeight: '50vh' 
+  }}>
+    <div>Loading...</div>
+  </div>
+);
 
 const App = () => {
   return (
@@ -26,18 +40,20 @@ const App = () => {
           <div className="hubspot-styles w-embed">Custom Styles</div>
         </div>
         <Header />
-        <Routes>
-          <Route element={<Home />} path="/" />
-          <Route element={<About />} path="/about" />
-          <Route element={<ServiceDetails />} path="/service/:slug" />
-          <Route element={<Project />} path="/projects" />
-          <Route element={<Contact />} path="/contact" />
-          <Route element={<Pricing />} path="/pricing" />
-          <Route element={<FintechSolutions />} path="/fintech-solutions" />
-          {/* <Route element={<Blog />} path="/blogs" /> */}
-          <Route element={<TermsCondition />} path="/terms-condition" />
-          <Route element={<ProvacyPolicy />} path="/privacy-policy" />
-        </Routes>
+        <Suspense fallback={<PageLoader />}>
+          <Routes>
+            <Route element={<Home />} path="/" />
+            <Route element={<About />} path="/about" />
+            <Route element={<ServiceDetails />} path="/service/:slug" />
+            <Route element={<Project />} path="/projects" />
+            <Route element={<Contact />} path="/contact" />
+            <Route element={<Pricing />} path="/pricing" />
+            <Route element={<FintechSolutions />} path="/fintech-solutions" />
+            {/* <Route element={<Blog />} path="/blogs" /> */}
+            <Route element={<TermsCondition />} path="/terms-condition" />
+            <Route element={<ProvacyPolicy />} path="/privacy-policy" />
+          </Routes>
+        </Suspense>
         <Footer />
       </div>
     </>

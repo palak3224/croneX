@@ -21,12 +21,16 @@ const ServiceDetails = () => {
               src="https://cdn.prod.website-files.com/67eb571d0fe797071c2c2759/67ff857be08695343437f37f_product_hero_left_Box.avif"
               alt=""
               className="background-border_left"
+              decoding="async"
+              fetchpriority="low"
             />
             <img
               loading="lazy"
               src="https://cdn.prod.website-files.com/67eb571d0fe797071c2c2759/67ff857b97f89d74677594e7_product_hero_right_box.avif"
               alt=""
               className="backhground_border_right"
+              decoding="async"
+              fetchpriority="low"
             />
           </div>
           <div className="padding-global">
@@ -241,9 +245,13 @@ const ServiceDetails = () => {
                       <img
                         style={{ width: "585px" }}
                         sizes="(max-width: 991px) 100vw, 858px"
-                        alt=""
+                        alt="Service illustration"
                         src="https://cdn.prod.website-files.com/67eb571d0fe797071c2c2759/680a1d8582f0e6c76c28178c_Content.avif"
                         loading="eager"
+                        fetchpriority="high"
+                        decoding="async"
+                        width="585"
+                        height="auto"
                       />
                     </div>
                   </div>
@@ -481,10 +489,12 @@ const ServiceDetails = () => {
                                     <img
                                       width="798"
                                       sizes={index === 2 ? "266px" : "(max-width: 991px) 100vw, 798px"}
-                                      alt=""
+                                      alt={tab.title}
                                       src={tab.image}
                                       loading="lazy"
-                                      srcset={index === 2 ? undefined : `${tab.image.replace('.avif', '-p-500.avif')} 500w, ${tab.image} 1596w`}
+                                      decoding="async"
+                                      fetchpriority={index === 0 ? "high" : "low"}
+                                      srcSet={index === 2 ? undefined : `${tab.image.replace('.avif', '-p-500.avif')} 500w, ${tab.image} 1596w`}
                                       className="data-fabrics_tabs_image"
                                     />
                                   </div>

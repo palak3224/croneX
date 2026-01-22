@@ -1,3 +1,7 @@
+import { memo } from "react";
+
+import { memo } from "react";
+
 const industryData = {
   Finance: {
     title: "Fintech App Development",
@@ -96,7 +100,7 @@ const industryData = {
   },
 };
 
-export default function IndustryContent({ active }) {
+function IndustryContent({ active }) {
   const content = industryData[active];
   if (!content) return null;
 
@@ -119,8 +123,16 @@ export default function IndustryContent({ active }) {
       </div>
 
       <div className="image-wrapper">
-        <img src={content.image} alt={content.title} />
+        <img 
+          src={content.image} 
+          alt={content.title}
+          loading="lazy"
+          decoding="async"
+          fetchpriority="low"
+        />
       </div>
     </div>
   );
 }
+
+export default memo(IndustryContent);

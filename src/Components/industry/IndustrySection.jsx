@@ -1,10 +1,10 @@
-import { useState } from "react";
+import { useState, memo } from "react";
 import IndustryTabs from "./IndustryTabs";
 import IndustryContent from "./IndustryContent";
 import { NavLink } from "react-router-dom";
 import "./Industry.css";
 
-export default function IndustrySection() {
+function IndustrySection() {
   const [active, setActive] = useState("Finance");
 
   return (
@@ -30,3 +30,5 @@ export default function IndustrySection() {
     </section>
   );
 }
+
+export default memo(IndustrySection);

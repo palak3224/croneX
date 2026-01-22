@@ -1,4 +1,4 @@
-import React from "react";
+import { memo } from "react";
 import * as MuiIcons from "@mui/icons-material";
 
 const tabs = [
@@ -12,7 +12,7 @@ const tabs = [
   { name: "eCommerce", icon: "ShoppingCart" },
 ];
 
-export default function IndustryTabs({ active, setActive }) {
+function IndustryTabs({ active, setActive }) {
   return (
     <div className="industry-tabs">
       {tabs.map((tab) => {
