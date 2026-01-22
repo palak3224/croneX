@@ -1,8 +1,10 @@
 import React, { useState } from "react";
+import Whatsapp from '../assets/images/whatsapp.png';
 
 const Contact = () => {
   const [result, setResult] = useState("");
   const [isSubmitting, setIsSubmitting] = useState(false);
+  const [showSuccessModal, setShowSuccessModal] = useState(false);
 
   const onSubmit = async (event) => {
     event.preventDefault();
@@ -21,8 +23,8 @@ const Contact = () => {
       const data = await response.json();
       
       if (data.success) {
-        setResult("Thank you! Your message has been sent successfully. We'll get back to you soon.");
         event.target.reset();
+        setShowSuccessModal(true);
       } else {
         setResult("Oops! Something went wrong. Please try again later.");
       }
@@ -33,8 +35,60 @@ const Contact = () => {
     }
   };
 
+  const phoneNumber = "919407084533";
+  const whatsappUrl = `https://wa.me/${phoneNumber}`;
+
+  const closeModal = () => {
+    setShowSuccessModal(false);
+    setResult("");
+  };
+
   return (
     <>
+      {/* Success Modal */}
+      {showSuccessModal && (
+        <div className="contact-success-modal-overlay" onClick={closeModal}>
+          <div className="contact-success-modal" onClick={(e) => e.stopPropagation()}>
+            <button 
+              className="contact-success-modal-close" 
+              onClick={closeModal}
+              aria-label="Close modal"
+            >
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M18 6L6 18M6 6L18 18" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+              </svg>
+            </button>
+            <div className="contact-success-modal-content">
+              <div className="contact-success-icon">
+                <svg width="64" height="64" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <circle cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="2" fill="none"/>
+                  <path d="M8 12L11 15L16 9" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                </svg>
+              </div>
+              <h2 className="contact-success-title">
+                Thank You for Contacting Us!
+              </h2>
+              <p className="contact-success-message">
+                We have received your message and will reach out to you soon.
+              </p>
+              <a
+                href={whatsappUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="contact-success-whatsapp-button"
+              >
+                <img
+                  src={Whatsapp}
+                  alt="WhatsApp"
+                  className="contact-success-whatsapp-icon"
+                />
+                <span>Connect on WhatsApp</span>
+              </a>
+            </div>
+          </div>
+        </div>
+      )}
+
       <div className="background-border_wrapper">
         <img
           loading="lazy"

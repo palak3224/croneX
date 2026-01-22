@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useRef, useEffect } from 'react';
 import {
   Android, Apple, Language, ViewQuilt,
   Favorite, PlayCircle, LocalTaxi, Flight, FitnessCenter, ShoppingCart,
@@ -9,6 +9,7 @@ import {
 } from '@mui/icons-material';
 import './pricing.css';
 import PricingHeader from './PricingHeader';
+import Whatsapp from '../assets/images/whatsapp.png';
 
 const Pricing = () => {
   const [step, setStep] = useState(1);
@@ -25,6 +26,10 @@ const Pricing = () => {
     phone: '',
     projectDetails: ''
   });
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [showSuccessModal, setShowSuccessModal] = useState(false);
+  const [errorMessage, setErrorMessage] = useState('');
+  const calculatorRef = useRef(null);
 
   const techOptions = [
     { id: 'android', label: 'Android', icon: <Android /> },
@@ -85,45 +90,206 @@ const Pricing = () => {
     });
   };
 
+  const scrollToCalculator = () => {
+    if (calculatorRef.current) {
+      const element = calculatorRef.current;
+      const elementPosition = element.getBoundingClientRect().top;
+      const offsetPosition = elementPosition + window.pageYOffset - 100; // 100px offset for header
+      
+      window.scrollTo({
+        top: offsetPosition,
+        behavior: 'smooth'
+      });
+    }
+  };
+
   const handleNext = () => {
     if (step === 1 && selections.tech.length === 0) {
       alert('Please select at least one technology stack.');
       return;
     }
-    if (step < 6) setStep(step + 1);
+    if (step < 6) {
+      setStep(step + 1);
+    }
   };
 
   const handleBack = () => {
-    if (step > 1) setStep(step - 1);
+    if (step > 1) {
+      setStep(step - 1);
+    }
   };
 
   const handleSkip = () => {
-    if (step < 6) setStep(step + 1);
+    if (step < 6) {
+      setStep(step + 1);
+    }
   };
+
+  // Auto-scroll when step changes
+  useEffect(() => {
+    // Small delay to ensure DOM has updated
+    const timer = setTimeout(() => {
+      scrollToCalculator();
+    }, 150);
+    
+    return () => clearTimeout(timer);
+  }, [step]);
 
   const handleInputChange = (e) => {
     const { name, value } = e.target;
     setFormData(prev => ({ ...prev, [name]: value }));
   };
 
-  const handleSubmit = () => {
+  const handleSubmit = async () => {
     if (!formData.fullName || !formData.email || !formData.phone) {
-      alert('Please fill in all required fields.');
+      setErrorMessage('Please fill in all required fields.');
       return;
     }
-    alert('Thank you! Your inquiry has been submitted.');
-    console.log('Form Data:', formData);
-    console.log('Selections:', selections);
+
+    setIsSubmitting(true);
+    setErrorMessage('');
+
+    // Format selections for email
+    const formatSelections = (category, options) => {
+      const selectedItems = selections[category] || [];
+      if (selectedItems.length === 0) return 'Not selected';
+      
+      const labels = selectedItems.map(id => {
+        const option = options.find(opt => opt.id === id);
+        return option ? option.label : id;
+      });
+      return labels.join(', ');
+    };
+
+    const emailBody = `
+Software Query Submission - Cost Calculator
+
+Contact Information:
+- Full Name: ${formData.fullName}
+- Email: ${formData.email}
+- Phone: ${formData.phone}
+${formData.projectDetails ? `- Project Details: ${formData.projectDetails}` : ''}
+
+Project Requirements:
+
+1. Technology Stack:
+${formatSelections('tech', techOptions)}
+
+2. App Type:
+${formatSelections('appType', appTypeOptions)}
+
+3. UI Type:
+${formatSelections('uiType', uiTypeOptions)}
+
+4. Number of Screens:
+${formatSelections('screens', screensOptions)}
+
+5. Development Urgency:
+${formatSelections('urgency', urgencyOptions)}
+    `.trim();
+
+    const formDataToSubmit = new FormData();
+    formDataToSubmit.append("access_key", "a7efff45-107d-4674-bc14-850db37cdc98");
+    formDataToSubmit.append("subject", "Software Query - Cost Calculator Submission");
+    formDataToSubmit.append("from_name", formData.fullName);
+    formDataToSubmit.append("email", formData.email);
+    formDataToSubmit.append("phone", formData.phone);
+    formDataToSubmit.append("message", emailBody);
+
+    try {
+      const response = await fetch("https://api.web3forms.com/submit", {
+        method: "POST",
+        body: formDataToSubmit
+      });
+
+      const data = await response.json();
+      
+      if (data.success) {
+        // Reset form
+        setStep(1);
+        setSelections({
+          tech: [],
+          appType: [],
+          uiType: [],
+          screens: [],
+          urgency: []
+        });
+        setFormData({
+          fullName: '',
+          email: '',
+          phone: '',
+          projectDetails: ''
+        });
+        setShowSuccessModal(true);
+      } else {
+        setErrorMessage("Oops! Something went wrong. Please try again later.");
+      }
+    } catch (error) {
+      setErrorMessage("Oops! Something went wrong. Please try again later.");
+    } finally {
+      setIsSubmitting(false);
+    }
+  };
+
+  const phoneNumber = "919407084533";
+  const whatsappUrl = `https://wa.me/${phoneNumber}`;
+
+  const closeModal = () => {
+    setShowSuccessModal(false);
+    setErrorMessage("");
   };
 
   return (
     <div className="">
+      {/* Success Modal */}
+      {showSuccessModal && (
+        <div className="contact-success-modal-overlay" onClick={closeModal}>
+          <div className="contact-success-modal" onClick={(e) => e.stopPropagation()}>
+            <button 
+              className="contact-success-modal-close" 
+              onClick={closeModal}
+              aria-label="Close modal"
+            >
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M18 6L6 18M6 6L18 18" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+              </svg>
+            </button>
+            <div className="contact-success-modal-content">
+              <div className="contact-success-icon">
+                <svg width="64" height="64" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <circle cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="2" fill="none"/>
+                  <path d="M8 12L11 15L16 9" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                </svg>
+              </div>
+              <h2 className="contact-success-title">
+                Thank You for Your Query!
+              </h2>
+              <p className="contact-success-message">
+                Your software query has been submitted successfully. We will reach out to you soon with the cost estimation.
+              </p>
+              <a
+                href={whatsappUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="contact-success-whatsapp-button"
+              >
+                <img
+                  src={Whatsapp}
+                  alt="WhatsApp"
+                  className="contact-success-whatsapp-icon"
+                />
+                <span>Connect on WhatsApp</span>
+              </a>
+            </div>
+          </div>
+        </div>
+      )}
 
 <div>
     <PricingHeader/>
 </div>
 
-    <div className='page-container'>
+    <div className='page-container' ref={calculatorRef}>
           <h1 className="title">App and Web <span className="text-gradient-grey">Cost Calculator</span></h1>
       <p className="subtitle">Get a cost estimation for your mobile app or website by answering the following questions</p>
 
@@ -309,8 +475,26 @@ const Pricing = () => {
               value={formData.projectDetails}
               onChange={handleInputChange}
             />
-            <button className="btn btn-submit" onClick={handleSubmit}>
-              SEND YOUR INQUIRY
+            {errorMessage && (
+              <div className="form-message" style={{
+                marginBottom: '1rem',
+                padding: '0.75rem',
+                borderRadius: '0.5rem',
+                backgroundColor: 'rgba(255, 0, 0, 0.1)',
+                color: '#ff4444',
+                fontSize: '0.875rem',
+                textAlign: 'left'
+              }}>
+                {errorMessage}
+              </div>
+            )}
+            <button 
+              className="btn btn-submit" 
+              onClick={handleSubmit}
+              disabled={isSubmitting}
+              style={{ cursor: isSubmitting ? 'not-allowed' : 'pointer', opacity: isSubmitting ? 0.7 : 1 }}
+            >
+              {isSubmitting ? 'SUBMITTING...' : 'SEND YOUR INQUIRY'}
             </button>
           </div>
         </>

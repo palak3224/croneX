@@ -291,13 +291,13 @@ const ServiceDetails = () => {
                               transform: "translate(0px, 0px)",
                             }}
                           >
-                            USECASEs
+                            {service.sectionTag || "USECASEs"}
                           </div>
                           <div className="spacer-xsmall"></div>
                           <div className="max-width-large-copy">
                             <h2 slide-i="">
                               <span className="text-gradient-grey">
-                                All FinTech-Specific Development
+                                {service.sectionTitle || "All Development Solutions"}
                               </span>
                             </h2>
                           </div>
@@ -306,443 +306,194 @@ const ServiceDetails = () => {
                             slide-i=""
                             className="text-size-large text-color-secondary"
                           >
-                            croneX Tech delivers end-to-end FinTech development
-                            solutions tailored to the unique needs of financial
-                            institutions, investment platforms, and insurance
-                            providers. Our expertise covers Mutual Funds, Stock
-                            Market platforms, Insurance systems, and secure
-                            Transaction Management applications.
+                            {service.sectionDescription || service.content}
                           </p>
                         </div>
                       </div>
                       <div className="spacer-small"></div>
-                      <div
-                        data-current="Tab 4"
-                        data-easing="ease"
-                        data-duration-in="300"
-                        data-duration-out="100"
-                        className="data-fabrics_tabs_component w-tabs"
-                      >
+                      {service.tabs && service.tabs.length > 0 && (
                         <div
-                          reveal-list=""
-                          className="tabs-menu no-scrollbar w-tab-menu"
-                          role="tablist"
-                        >
-                          <a
-                            data-w-tab="Tab 1"
-                            reveal-item=""
-                            className="tab-link w-inline-block w-tab-link w--current"
-                            id="w-tabs-0-data-w-tab-0"
-                            href="#w-tabs-0-data-w-pane-0"
-                            role="tab"
-                            aria-controls="w-tabs-0-data-w-pane-0"
-                            aria-selected="true"
-                            style={{
-                              translate: "none",
-                              rotate: "none",
-                              scale: "none",
-                              transform: "translate(0px, 0px)",
-                              opacity: 1,
-                            }}
-                          >
-                            <div className="tab-link_content">
-                              <div className="icon-embed-custom1 w-embed">
-                                <svg
-                                  width=" 100%"
-                                  height=" 100%"
-                                  viewBox="0 0 20 21"
-                                  fill="none"
-                                  xmlns="http://www.w3.org/2000/svg"
-                                >
-                                  <path
-                                    d="M5.83333 8.82835V6.32835C5.83337 5.41116 6.13605 4.51961 6.69441 3.79196C7.25278 3.06431 8.03564 2.54124 8.92157 2.30385C9.80751 2.06646 10.747 2.12802 11.5944 2.47899C12.4418 2.82996 13.1497 3.45073 13.6083 4.24502M10.8333 13.8284C10.8333 14.2886 10.4602 14.6617 10 14.6617C9.53976 14.6617 9.16667 14.2886 9.16667 13.8284C9.16667 13.3681 9.53976 12.995 10 12.995C10.4602 12.995 10.8333 13.3681 10.8333 13.8284ZM4.16667 8.82835H15.8333C16.7538 8.82835 17.5 9.57454 17.5 10.495V17.1617C17.5 18.0822 16.7538 18.8283 15.8333 18.8283H4.16667C3.24619 18.8283 2.5 18.0822 2.5 17.1617V10.495C2.5 9.57454 3.24619 8.82835 4.16667 8.82835Z"
-                                    stroke="currentColor"
-                                    stroke-width="2"
-                                    stroke-linecap="round"
-                                    stroke-linejoin="round"
-                                  ></path>
-                                </svg>
-                              </div>
-                              <div>Data Integrations</div>
-                            </div>
-                            <div className="tab-link_glow"></div>
-                            <div className="tab-link_border"></div>
-                          </a>
-                          <a
-                            data-w-tab="Tab 2"
-                            reveal-item=""
-                            className="tab-link w-inline-block w-tab-link"
-                            id="w-tabs-0-data-w-tab-1"
-                            href="#w-tabs-0-data-w-pane-1"
-                            role="tab"
-                            aria-controls="w-tabs-0-data-w-pane-1"
-                            aria-selected="false"
-                            style={{
-                              translate: "none",
-                              rotate: "none",
-                              scale: "none",
-                              transform: "translate(0px, 0px)",
-                              opacity: 1,
-                            }}
-                            tabindex="-1"
-                          >
-                            <div className="tab-link_content">
-                              <div className="icon-embed-custom1 w-embed">
-                                <svg
-                                  width=" 100%"
-                                  height=" 100%"
-                                  viewBox="0 0 21 20"
-                                  fill="none"
-                                  xmlns="http://www.w3.org/2000/svg"
-                                >
-                                  <path
-                                    d="M9.1224 17.5V6.66667C9.1224 6.44565 9.0346 6.23369 8.87832 6.07741C8.72204 5.92113 8.51008 5.83333 8.28906 5.83333H4.1224C3.90138 5.83333 3.68942 5.92113 3.53314 6.07741C3.37686 6.23369 3.28906 6.44565 3.28906 6.66667V16.6667C3.28906 16.8877 3.37686 17.0996 3.53314 17.2559C3.68942 17.4122 3.90138 17.5 4.1224 17.5H14.1224C14.3434 17.5 14.5554 17.4122 14.7117 17.2559C14.8679 17.0996 14.9557 16.8877 14.9557 16.6667V12.5C14.9557 12.279 14.8679 12.067 14.7117 11.9107C14.5554 11.7545 14.3434 11.6667 14.1224 11.6667H3.28906M13.2891 2.5H17.4557C17.916 2.5 18.2891 2.8731 18.2891 3.33333V7.5C18.2891 7.96024 17.916 8.33333 17.4557 8.33333H13.2891C12.8288 8.33333 12.4557 7.96024 12.4557 7.5V3.33333C12.4557 2.8731 12.8288 2.5 13.2891 2.5Z"
-                                    stroke="currentColor"
-                                    stroke-width="1.5"
-                                    stroke-linecap="round"
-                                    stroke-linejoin="round"
-                                  ></path>
-                                </svg>
-                              </div>
-                              <div>Volume Reduction</div>
-                            </div>
-                            <div className="tab-link_glow"></div>
-                            <div className="tab-link_border"></div>
-                          </a>
-                          <a
-                            data-w-tab="Tab 3"
-                            reveal-item=""
-                            className="tab-link w-inline-block w-tab-link"
-                            id="w-tabs-0-data-w-tab-2"
-                            href="#w-tabs-0-data-w-pane-2"
-                            role="tab"
-                            aria-controls="w-tabs-0-data-w-pane-2"
-                            aria-selected="false"
-                            style={{
-                              translate: "none",
-                              rotate: "none",
-                              scale: "none",
-                              transform: "translate(0px, 0px)",
-                              opacity: 1,
-                            }}
-                            tabindex="-1"
-                          >
-                            <div className="tab-link_content">
-                              <div className="icon-embed-custom1 w-embed">
-                                <svg
-                                  width=" 100%"
-                                  height=" 100%"
-                                  viewBox="0 0 21 20"
-                                  fill="none"
-                                  xmlns="http://www.w3.org/2000/svg"
-                                >
-                                  <path
-                                    d="M14.9557 10H13.2891L11.6224 14.1667L9.95573 5.83333L8.28906 10H6.6224M4.95573 2.5H16.6224C17.5429 2.5 18.2891 3.24619 18.2891 4.16667V15.8333C18.2891 16.7538 17.5429 17.5 16.6224 17.5H4.95573C4.03525 17.5 3.28906 16.7538 3.28906 15.8333V4.16667C3.28906 3.24619 4.03525 2.5 4.95573 2.5Z"
-                                    stroke="currentColor"
-                                    stroke-width="1.5"
-                                    stroke-linecap="round"
-                                    stroke-linejoin="round"
-                                  ></path>
-                                </svg>
-                              </div>
-                              <div>Pipeline Health</div>
-                            </div>
-                            <div className="tab-link_glow"></div>
-                            <div className="tab-link_border"></div>
-                          </a>
-                          <a
-                            data-w-tab="Tab 4"
-                            reveal-item=""
-                            className="tab-link w-inline-block w-tab-link"
-                            id="w-tabs-0-data-w-tab-3"
-                            href="#w-tabs-0-data-w-pane-3"
-                            role="tab"
-                            aria-controls="w-tabs-0-data-w-pane-3"
-                            aria-selected="false"
-                            style={{
-                              translate: "none",
-                              rotate: "none",
-                              scale: "none",
-                              transform: "translate(0px, 0px)",
-                              opacity: 1,
-                            }}
-                            tabindex="-1"
-                          >
-                            <div className="tab-link_content">
-                              <div className="icon-embed-custom1 w-embed">
-                                <svg
-                                  width=" 100%"
-                                  height=" 100%"
-                                  viewBox="0 0 21 20"
-                                  fill="none"
-                                  xmlns="http://www.w3.org/2000/svg"
-                                >
-                                  <path
-                                    d="M2.45508 9.99989C2.45469 10.1593 2.50001 10.3154 2.58568 10.4498C2.67135 10.5843 2.79376 10.6913 2.93841 10.7582L10.1051 14.0166C10.3211 14.1144 10.5555 14.165 10.7926 14.165C11.0297 14.165 11.2641 14.1144 11.4801 14.0166L18.6301 10.7666C18.7776 10.7003 18.9026 10.5925 18.9899 10.4563C19.0772 10.3202 19.123 10.1616 19.1217 9.99989M2.45508 14.1666C2.45469 14.3259 2.50001 14.4821 2.58568 14.6165C2.67135 14.7509 2.79376 14.8579 2.93841 14.9249L10.1051 18.1832C10.3211 18.281 10.5555 18.3316 10.7926 18.3316C11.0297 18.3316 11.2641 18.281 11.4801 18.1832L18.6301 14.9332C18.7776 14.8669 18.9026 14.7591 18.9899 14.623C19.0772 14.4869 19.123 14.3283 19.1217 14.1666M11.4801 1.81656C11.2629 1.71751 11.0271 1.66626 10.7884 1.66626C10.5498 1.66626 10.3139 1.71751 10.0967 1.81656L2.95508 5.06656C2.80721 5.13176 2.68148 5.23856 2.59322 5.37394C2.50495 5.50932 2.45796 5.66744 2.45796 5.82906C2.45796 5.99067 2.50495 6.1488 2.59322 6.28418C2.68148 6.41956 2.80721 6.52635 2.95508 6.59156L10.1051 9.84989C10.3222 9.94893 10.5581 10.0002 10.7967 10.0002C11.0354 10.0002 11.2713 9.94893 11.4884 9.84989L18.6384 6.59989C18.7863 6.53469 18.912 6.42789 19.0003 6.29251C19.0885 6.15713 19.1355 5.999 19.1355 5.83739C19.1355 5.67578 19.0885 5.51765 19.0003 5.38227C18.912 5.24689 18.7863 5.14009 18.6384 5.07489L11.4801 1.81656Z"
-                                    stroke="currentColor"
-                                    stroke-width="1.5"
-                                    stroke-linecap="round"
-                                    stroke-linejoin="round"
-                                  ></path>
-                                </svg>
-                              </div>
-                              <div>Data Management</div>
-                            </div>
-                            <div className="tab-link_glow"></div>
-                            <div className="tab-link_border"></div>
-                          </a>
-                        </div>
-                        <div
-                          slide-in=""
-                          className="data-fabrics_tabs_tab-content w-tab-content"
-                          style={{
-                            translate: "none",
-                            rotate: "none",
-                            scale: "none",
-                            opacity: 1,
-                            transform: "translate(0px, 0px)",
-                          }}
+                          data-current={`Tab ${service.tabs.length}`}
+                          data-easing="ease"
+                          data-duration-in="300"
+                          data-duration-out="100"
+                          className="data-fabrics_tabs_component w-tabs"
                         >
                           <div
-                            data-w-tab="Tab 1"
-                            className="data-fabrics_tabs_pane w-tab-pane w--tab-active"
-                            id="w-tabs-0-data-w-pane-0"
-                            role="tabpanel"
-                            aria-labelledby="w-tabs-0-data-w-tab-0"
+                            reveal-list=""
+                            className="tabs-menu no-scrollbar w-tab-menu"
+                            role="tablist"
+                          >
+                            {service.tabs.map((tab, index) => (
+                              <a
+                                key={index}
+                                data-w-tab={`Tab ${index + 1}`}
+                                reveal-item=""
+                                className={`tab-link w-inline-block w-tab-link ${index === 0 ? 'w--current' : ''}`}
+                                id={`w-tabs-0-data-w-tab-${index}`}
+                                href={`#w-tabs-0-data-w-pane-${index}`}
+                                role="tab"
+                                aria-controls={`w-tabs-0-data-w-pane-${index}`}
+                                aria-selected={index === 0}
+                                style={{
+                                  translate: "none",
+                                  rotate: "none",
+                                  scale: "none",
+                                  transform: "translate(0px, 0px)",
+                                  opacity: 1,
+                                }}
+                                tabIndex={index === 0 ? undefined : -1}
+                              >
+                                <div className="tab-link_content">
+                                  <div className="icon-embed-custom1 w-embed">
+                                    {tab.icon === "data-integration" ? (
+                                      <svg
+                                        width=" 100%"
+                                        height=" 100%"
+                                        viewBox="0 0 20 21"
+                                        fill="none"
+                                        xmlns="http://www.w3.org/2000/svg"
+                                      >
+                                        <path
+                                          d="M5.83333 8.82835V6.32835C5.83337 5.41116 6.13605 4.51961 6.69441 3.79196C7.25278 3.06431 8.03564 2.54124 8.92157 2.30385C9.80751 2.06646 10.747 2.12802 11.5944 2.47899C12.4418 2.82996 13.1497 3.45073 13.6083 4.24502M10.8333 13.8284C10.8333 14.2886 10.4602 14.6617 10 14.6617C9.53976 14.6617 9.16667 14.2886 9.16667 13.8284C9.16667 13.3681 9.53976 12.995 10 12.995C10.4602 12.995 10.8333 13.3681 10.8333 13.8284ZM4.16667 8.82835H15.8333C16.7538 8.82835 17.5 9.57454 17.5 10.495V17.1617C17.5 18.0822 16.7538 18.8283 15.8333 18.8283H4.16667C3.24619 18.8283 2.5 18.0822 2.5 17.1617V10.495C2.5 9.57454 3.24619 8.82835 4.16667 8.82835Z"
+                                          stroke="currentColor"
+                                          strokeWidth="2"
+                                          strokeLinecap="round"
+                                          strokeLinejoin="round"
+                                        ></path>
+                                      </svg>
+                                    ) : tab.icon === "volume-reduction" ? (
+                                      <svg
+                                        width=" 100%"
+                                        height=" 100%"
+                                        viewBox="0 0 21 20"
+                                        fill="none"
+                                        xmlns="http://www.w3.org/2000/svg"
+                                      >
+                                        <path
+                                          d="M9.1224 17.5V6.66667C9.1224 6.44565 9.0346 6.23369 8.87832 6.07741C8.72204 5.92113 8.51008 5.83333 8.28906 5.83333H4.1224C3.90138 5.83333 3.68942 5.92113 3.53314 6.07741C3.37686 6.23369 3.28906 6.44565 3.28906 6.66667V16.6667C3.28906 16.8877 3.37686 17.0996 3.53314 17.2559C3.68942 17.4122 3.90138 17.5 4.1224 17.5H14.1224C14.3434 17.5 14.5554 17.4122 14.7117 17.2559C14.8679 17.0996 14.9557 16.8877 14.9557 16.6667V12.5C14.9557 12.279 14.8679 12.067 14.7117 11.9107C14.5554 11.7545 14.3434 11.6667 14.1224 11.6667H3.28906M13.2891 2.5H17.4557C17.916 2.5 18.2891 2.8731 18.2891 3.33333V7.5C18.2891 7.96024 17.916 8.33333 17.4557 8.33333H13.2891C12.8288 8.33333 12.4557 7.96024 12.4557 7.5V3.33333C12.4557 2.8731 12.8288 2.5 13.2891 2.5Z"
+                                          stroke="currentColor"
+                                          strokeWidth="1.5"
+                                          strokeLinecap="round"
+                                          strokeLinejoin="round"
+                                        ></path>
+                                      </svg>
+                                    ) : tab.icon === "pipeline-health" ? (
+                                      <svg
+                                        width=" 100%"
+                                        height=" 100%"
+                                        viewBox="0 0 21 20"
+                                        fill="none"
+                                        xmlns="http://www.w3.org/2000/svg"
+                                      >
+                                        <path
+                                          d="M14.9557 10H13.2891L11.6224 14.1667L9.95573 5.83333L8.28906 10H6.6224M4.95573 2.5H16.6224C17.5429 2.5 18.2891 3.24619 18.2891 4.16667V15.8333C18.2891 16.7538 17.5429 17.5 16.6224 17.5H4.95573C4.03525 17.5 3.28906 16.7538 3.28906 15.8333V4.16667C3.28906 3.24619 4.03525 2.5 4.95573 2.5Z"
+                                          stroke="currentColor"
+                                          strokeWidth="1.5"
+                                          strokeLinecap="round"
+                                          strokeLinejoin="round"
+                                        ></path>
+                                      </svg>
+                                    ) : (
+                                      <svg
+                                        width=" 100%"
+                                        height=" 100%"
+                                        viewBox="0 0 21 20"
+                                        fill="none"
+                                        xmlns="http://www.w3.org/2000/svg"
+                                      >
+                                        <path
+                                          d="M2.45508 9.99989C2.45469 10.1593 2.50001 10.3154 2.58568 10.4498C2.67135 10.5843 2.79376 10.6913 2.93841 10.7582L10.1051 14.0166C10.3211 14.1144 10.5555 14.165 10.7926 14.165C11.0297 14.165 11.2641 14.1144 11.4801 14.0166L18.6301 10.7666C18.7776 10.7003 18.9026 10.5925 18.9899 10.4563C19.0772 10.3202 19.123 10.1616 19.1217 9.99989M2.45508 14.1666C2.45469 14.3259 2.50001 14.4821 2.58568 14.6165C2.67135 14.7509 2.79376 14.8579 2.93841 14.9249L10.1051 18.1832C10.3211 18.281 10.5555 18.3316 10.7926 18.3316C11.0297 18.3316 11.2641 18.281 11.4801 18.1832L18.6301 14.9332C18.7776 14.8669 18.9026 14.7591 18.9899 14.623C19.0772 14.4869 19.123 14.3283 19.1217 14.1666M11.4801 1.81656C11.2629 1.71751 11.0271 1.66626 10.7884 1.66626C10.5498 1.66626 10.3139 1.71751 10.0967 1.81656L2.95508 5.06656C2.80721 5.13176 2.68148 5.23856 2.59322 5.37394C2.50495 5.50932 2.45796 5.66744 2.45796 5.82906C2.45796 5.99067 2.50495 6.1488 2.59322 6.28418C2.68148 6.41956 2.80721 6.52635 2.95508 6.59156L10.1051 9.84989C10.3222 9.94893 10.5581 10.0002 10.7967 10.0002C11.0354 10.0002 11.2713 9.94893 11.4884 9.84989L18.6384 6.59989C18.7863 6.53469 18.912 6.42789 19.0003 6.29251C19.0885 6.15713 19.1355 5.999 19.1355 5.83739C19.1355 5.67578 19.0885 5.51765 19.0003 5.38227C18.912 5.24689 18.7863 5.14009 18.6384 5.07489L11.4801 1.81656Z"
+                                          stroke="currentColor"
+                                          strokeWidth="1.5"
+                                          strokeLinecap="round"
+                                          strokeLinejoin="round"
+                                        ></path>
+                                      </svg>
+                                    )}
+                                  </div>
+                                  <div>{tab.label}</div>
+                                </div>
+                                <div className="tab-link_glow"></div>
+                                <div className="tab-link_border"></div>
+                              </a>
+                            ))}
+                          </div>
+                          <div
+                            slide-in=""
+                            className="data-fabrics_tabs_tab-content w-tab-content"
                             style={{
+                              translate: "none",
+                              rotate: "none",
+                              scale: "none",
                               opacity: 1,
-                              transition: "all 300ms, opacity 300ms",
+                              transform: "translate(0px, 0px)",
                             }}
                           >
-                            <div className="data-fabrics_tabs_pane-content">
-                              <div className="data-fabrics_tab_menu">
-                                <div className="tag-secondary">
-                                  DATA INTEGRATIONS
-                                </div>
-                                <div className="spacer-xsmall"></div>
-                                <h3 className="heading-style-h5 text-color-primary">
-                                  Automated data collection <br />
-                                  &amp; ingestion
-                                </h3>
-                                <div className="spacer-0-75rem"></div>
-                                <p>
-                                  Collect logs from cloud platforms, on-prem
-                                  telemetry, and custom apps using prebuilt
-                                  integrations. No scripting, no
-                                  bottlenecks–just fast, reliable onboarding
-                                  across your ecosystem.
-                                </p>
-                                <div className="spacer-1-25rem"></div>
-                                <div className="data-fabrics_tab_list">
-                                  <div className="data-fabrics_tab_item">
-                                    <div className="heading-style-h6 text-gradient-blue">
-                                      500+
+                            {service.tabs.map((tab, index) => (
+                              <div
+                                key={index}
+                                data-w-tab={`Tab ${index + 1}`}
+                                className={`data-fabrics_tabs_pane w-tab-pane ${index === 0 ? 'w--tab-active' : ''}`}
+                                id={`w-tabs-0-data-w-pane-${index}`}
+                                role="tabpanel"
+                                aria-labelledby={`w-tabs-0-data-w-tab-${index}`}
+                                style={{
+                                  opacity: index === 0 ? 1 : 0,
+                                  transition: "all 300ms, opacity 300ms",
+                                }}
+                              >
+                                <div className="data-fabrics_tabs_pane-content">
+                                  <div className="data-fabrics_tab_menu">
+                                    <div className="tag-secondary">
+                                      {tab.tag}
                                     </div>
+                                    <div className="spacer-xsmall"></div>
+                                    <h3 className="heading-style-h5 text-color-primary">
+                                      {tab.title.includes(' <br />') ? (
+                                        <>
+                                          {tab.title.split(' <br />')[0]}
+                                          <br />
+                                          {tab.title.split(' <br />')[1]}
+                                        </>
+                                      ) : (
+                                        tab.title
+                                      )}
+                                    </h3>
                                     <div className="spacer-0-75rem"></div>
-                                    <div className="text-size-tiny">
-                                      connectors for source onboarding
+                                    <p>{tab.description}</p>
+                                    <div className="spacer-1-25rem"></div>
+                                    <div className="data-fabrics_tab_list">
+                                      {tab.stats.map((stat, statIndex) => (
+                                        <div key={statIndex} className="data-fabrics_tab_item">
+                                          <div className="heading-style-h6 text-gradient-blue">
+                                            {stat.value}
+                                          </div>
+                                          <div className="spacer-0-75rem"></div>
+                                          <div className="text-size-tiny">
+                                            {stat.text}
+                                          </div>
+                                        </div>
+                                      ))}
                                     </div>
                                   </div>
-                                  <div className="data-fabrics_tab_item">
-                                    <div className="heading-style-h6 text-gradient-blue">
-                                      80%
-                                    </div>
-                                    <div className="spacer-0-75rem"></div>
-                                    <div className="text-size-tiny">
-                                      reduction in manual setup time
-                                    </div>
-                                  </div>
-                                </div>
-                              </div>
-                              <div className="data-fabrics_tabs_image-wrapper">
-                                <img
-                                  width="798"
-                                  sizes="100vw"
-                                  alt=""
-                                  src="https://cdn.prod.website-files.com/67eb571d0fe797071c2c2759/680ef56277a9f7af1127d5d4_10.avif"
-                                  loading="lazy"
-                                  srcset="https://cdn.prod.website-files.com/67eb571d0fe797071c2c2759/680ef56277a9f7af1127d5d4_10-p-500.avif 500w, https://cdn.prod.website-files.com/67eb571d0fe797071c2c2759/680ef56277a9f7af1127d5d4_10.avif 1596w"
-                                  className="data-fabrics_tabs_image"
-                                />
-                              </div>
-                            </div>
-                          </div>
-                          <div
-                            data-w-tab="Tab 2"
-                            className="data-fabrics_tabs_pane w-tab-pane"
-                            id="w-tabs-0-data-w-pane-1"
-                            role="tabpanel"
-                            aria-labelledby="w-tabs-0-data-w-tab-1"
-                          >
-                            <div className="data-fabrics_tabs_pane-content">
-                              <div className="data-fabrics_tab_menu">
-                                <div className="tag-secondary">
-                                  Volume Reduction
-                                </div>
-                                <div className="spacer-xsmall"></div>
-                                <h3 className="heading-style-h5 text-color-primary">
-                                  SIEM cost reduction &amp; storage optimization
-                                </h3>
-                                <div className="spacer-0-75rem"></div>
-                                <p>
-                                  Only send high-value security data to your
-                                  SIEM. Use rule-based and AI-driven filtering
-                                  to route irrelevant or low-priority logs to
-                                  blob storage. Pay only for what matters.
-                                </p>
-                                <div className="spacer-1-25rem"></div>
-                                <div className="data-fabrics_tab_list">
-                                  <div className="data-fabrics_tab_item">
-                                    <div className="heading-style-h6 text-gradient-blue">
-                                      50%
-                                    </div>
-                                    <div className="spacer-0-75rem"></div>
-                                    <div className="text-size-tiny">
-                                      reduction in SIEM and observability spend
-                                    </div>
-                                  </div>
-                                  <div className="data-fabrics_tab_item">
-                                    <div className="heading-style-h6 text-gradient-blue">
-                                      &lt;14 days
-                                    </div>
-                                    <div className="spacer-0-75rem"></div>
-                                    <div className="text-size-tiny">
-                                      to realize time-to-value
-                                    </div>
+                                  <div className="data-fabrics_tabs_image-wrapper">
+                                    <img
+                                      width="798"
+                                      sizes={index === 2 ? "266px" : "(max-width: 991px) 100vw, 798px"}
+                                      alt=""
+                                      src={tab.image}
+                                      loading="lazy"
+                                      srcset={index === 2 ? undefined : `${tab.image.replace('.avif', '-p-500.avif')} 500w, ${tab.image} 1596w`}
+                                      className="data-fabrics_tabs_image"
+                                    />
                                   </div>
                                 </div>
                               </div>
-                              <div className="data-fabrics_tabs_image-wrapper">
-                                <img
-                                  width="798"
-                                  sizes="100vw"
-                                  alt=""
-                                  src="https://cdn.prod.website-files.com/67eb571d0fe797071c2c2759/6812059eedff7bc754c6bbf2_15.avif"
-                                  loading="lazy"
-                                  srcset="https://cdn.prod.website-files.com/67eb571d0fe797071c2c2759/6812059eedff7bc754c6bbf2_15-p-500.avif 500w, https://cdn.prod.website-files.com/67eb571d0fe797071c2c2759/6812059eedff7bc754c6bbf2_15.avif 1596w"
-                                  className="data-fabrics_tabs_image"
-                                />
-                              </div>
-                            </div>
-                          </div>
-                          <div
-                            data-w-tab="Tab 3"
-                            className="data-fabrics_tabs_pane w-tab-pane"
-                            id="w-tabs-0-data-w-pane-2"
-                            role="tabpanel"
-                            aria-labelledby="w-tabs-0-data-w-tab-2"
-                          >
-                            <div className="data-fabrics_tabs_pane-content">
-                              <div className="data-fabrics_tab_menu">
-                                <div className="tag-secondary">
-                                  Pipeline Health
-                                </div>
-                                <div className="spacer-xsmall"></div>
-                                <h3 className="heading-style-h5 text-color-primary">
-                                  Telemetry tracking and pipeline resilience
-                                </h3>
-                                <div className="spacer-0-75rem"></div>
-                                <p>
-                                  Monitor data delivery in real time. If an
-                                  issue occurs, traffic reroutes through a
-                                  failsafe queue and alerts trigger instantly.
-                                  No silent failures. No data loss.
-                                </p>
-                                <div className="spacer-1-25rem"></div>
-                                <div className="data-fabrics_tab_list">
-                                  <div className="data-fabrics_tab_item">
-                                    <div className="heading-style-h6 text-gradient-blue">
-                                      100%
-                                    </div>
-                                    <div className="spacer-0-75rem"></div>
-                                    <div className="text-size-tiny">
-                                      lossless, resilient data collection
-                                    </div>
-                                  </div>
-                                  <div className="data-fabrics_tab_item">
-                                    <div className="heading-style-h6 text-gradient-blue">
-                                      80%+
-                                    </div>
-                                    <div className="spacer-0-75rem"></div>
-                                    <div className="text-size-tiny">
-                                      increase in telemetry visibility
-                                    </div>
-                                  </div>
-                                </div>
-                              </div>
-                              <div className="data-fabrics_tabs_image-wrapper">
-                                <img
-                                  width="266"
-                                  loading="lazy"
-                                  alt=""
-                                  src="https://cdn.prod.website-files.com/67eb571d0fe797071c2c2759/680ea524ff4139ac1011d239_16.avif"
-                                  className="data-fabrics_tabs_image"
-                                />
-                              </div>
-                            </div>
-                          </div>
-                          <div
-                            data-w-tab="Tab 4"
-                            className="data-fabrics_tabs_pane w-tab-pane"
-                            id="w-tabs-0-data-w-pane-3"
-                            role="tabpanel"
-                            aria-labelledby="w-tabs-0-data-w-tab-3"
-                          >
-                            <div className="data-fabrics_tabs_pane-content">
-                              <div className="data-fabrics_tab_menu">
-                                <div className="tag-secondary">
-                                  Data Management
-                                </div>
-                                <div className="spacer-xsmall"></div>
-                                <h3 className="heading-style-h5 text-color-primary">
-                                  Simplified data ownership &amp; governance
-                                </h3>
-                                <div className="spacer-0-75rem"></div>
-                                <p>
-                                  Avoid vendor lock-in with full control over
-                                  how your data moves and transforms. Automate
-                                  data cataloging, quarantine sensitive data,
-                                  convert across formats and data models–all
-                                  through AI-powered data identification.
-                                </p>
-                                <div className="spacer-1-25rem"></div>
-                                <div className="data-fabrics_tab_list">
-                                  <div className="data-fabrics_tab_item">
-                                    <div className="heading-style-h6 text-gradient-blue">
-                                      99%
-                                    </div>
-                                    <div className="spacer-0-75rem"></div>
-                                    <div className="text-size-tiny">
-                                      improved data visibility from source to
-                                      destination
-                                    </div>
-                                  </div>
-                                  <div className="data-fabrics_tab_item">
-                                    <div className="heading-style-h6 text-gradient-blue">
-                                      80%+
-                                    </div>
-                                    <div className="spacer-0-75rem"></div>
-                                    <div className="text-size-tiny">
-                                      reduced data ops effort through automation
-                                    </div>
-                                  </div>
-                                </div>
-                              </div>
-                              <div className="data-fabrics_tabs_image-wrapper">
-                                <img
-                                  width="798"
-                                  sizes="(max-width: 991px) 100vw, 798px"
-                                  alt=""
-                                  src="https://cdn.prod.website-files.com/67eb571d0fe797071c2c2759/680aaeec2f400f5242659e36_17.avif"
-                                  loading="lazy"
-                                  srcset="https://cdn.prod.website-files.com/67eb571d0fe797071c2c2759/680aaeec2f400f5242659e36_17-p-500.avif 500w, https://cdn.prod.website-files.com/67eb571d0fe797071c2c2759/680aaeec2f400f5242659e36_17.avif 1596w"
-                                  className="data-fabrics_tabs_image"
-                                />
-                              </div>
-                            </div>
+                            ))}
                           </div>
                         </div>
-                      </div>
+                      )}
                     </div>
                   </div>
                 </div>

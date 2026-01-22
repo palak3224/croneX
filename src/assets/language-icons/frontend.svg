@@ -1,0 +1,24 @@
+<svg width="46" height="46" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background Circle -->
+  <circle cx="23" cy="23" r="18" fill="#7FEBA1"/>
+  
+  <!-- Browser Window Frame -->
+  <path d="M8 12C8 10.8954 8.89543 10 10 10H36C37.1046 10 38 10.8954 38 12V34C38 35.1046 37.1046 36 36 36H10C8.89543 36 8 35.1046 8 34V12Z" stroke="#333" stroke-width="1.5" fill="white"/>
+  
+  <!-- Browser Controls -->
+  <circle cx="12" cy="13" r="1" fill="#333"/>
+  <circle cx="15.5" cy="13" r="1" fill="#333"/>
+  <circle cx="19" cy="13" r="1" fill="#333"/>
+  
+  <!-- Code Brackets (< >) -->
+  <path d="M16 20L13 23L16 26" stroke="#333" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M24 20L27 23L24 26" stroke="#333" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+  
+  <!-- Forward Slash (/) -->
+  <path d="M21 18L19 28" stroke="#333" stroke-width="1.5" stroke-linecap="round"/>
+  
+  <!-- Decorative Elements -->
+  <path d="M30 20H33" stroke="#333" stroke-width="1.5" stroke-linecap="round"/>
+  <path d="M30 23H33" stroke="#333" stroke-width="1.5" stroke-linecap="round"/>
+  <path d="M30 26H33" stroke="#333" stroke-width="1.5" stroke-linecap="round"/>
+</svg>

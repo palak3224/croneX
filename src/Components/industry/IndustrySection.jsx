@@ -17,7 +17,7 @@ export default function IndustrySection() {
             Tailored for Every Business
           </span>
         </h1>
-        <NavLink to="/projects">
+        <NavLink to="/contact">
           <button>Explore More In Industries →</button>
         </NavLink>
       </div>
