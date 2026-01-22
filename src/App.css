@@ -11,6 +11,9 @@ html,
 body {
   overflow-x: hidden;
   /* Prevent horizontal scroll */
+  overflow-y: auto; /* Ensure vertical scrolling works */
+  height: auto; /* Allow content to determine height */
+  min-height: 100vh; /* Minimum viewport height */
 }
 
 * {
@@ -40,6 +43,13 @@ body {
   -webkit-overflow-scrolling: touch;
   overscroll-behavior-y: none;
   will-change: scroll-position;
+}
+
+/* Mobile: Allow native scroll momentum */
+@media screen and (max-width: 991px) {
+  body {
+    overscroll-behavior-y: auto !important; /* Allow native scroll momentum on mobile */
+  }
 }
 
 /* Optimize rendering during scroll */
@@ -1547,6 +1557,70 @@ a{
   .contact-success-whatsapp-button {
     padding: 0.875rem 1.5rem;
     font-size: 0.9375rem;
+  }
+}
+
+/* Mobile scrolling fixes */
+@media screen and (max-width: 991px) {
+  html,
+  body {
+    overflow-y: auto !important;
+    height: auto !important;
+    position: relative !important;
+    -webkit-overflow-scrolling: touch; /* Smooth native scrolling on iOS */
+    touch-action: pan-y; /* Allow vertical panning */
+    overscroll-behavior-y: auto !important; /* Allow native scroll momentum */
+  }
+
+  .page-wrapper {
+    position: relative !important;
+    height: auto !important;
+    min-height: 100vh;
+    overflow: visible !important;
+    contain: none !important; /* Remove contain to allow scrolling */
+  }
+
+  /* Disable Lenis on mobile */
+  html.lenis,
+  html.lenis-smooth,
+  html.lenis-stopped {
+    overflow-y: auto !important;
+    height: auto !important;
+  }
+
+  /* Ensure all containers allow scrolling */
+  .main-wrapper {
+    overflow: visible !important;
+    height: auto !important;
+  }
+
+  /* Allow horizontal scrolling for specific containers */
+  .home_testimonials_list-wrapper,
+  .home_testimonials_list,
+  [class*="testimonials"][class*="list"],
+  [class*="testimonials"][class*="wrapper"],
+  .industry-tabs,
+  .progress-container,
+  [class*="overflow-x"],
+  [style*="overflow-x: auto"],
+  [style*="overflow-x: scroll"],
+  /* Industry section horizontal scroll */
+  [class*="industry"][class*="scroll"],
+  /* Pricing section horizontal scroll */
+  [class*="pricing"][class*="scroll"] {
+    touch-action: pan-x pan-y !important; /* Allow both horizontal and vertical panning */
+    -webkit-overflow-scrolling: touch !important;
+  }
+  
+  /* Ensure body scrolls, not a wrapper */
+  body > * {
+    overflow: visible !important;
+  }
+  
+  /* Default touch action for body/html - vertical only */
+  html,
+  body {
+    touch-action: pan-y; /* Vertical only for main scroll */
   }
 }
 

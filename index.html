@@ -224,13 +224,9 @@
 <body>
   <div id="root"></div>
   <script type="module" src="/src/main.jsx"></script>
-  <!-- Local asset scripts - remove type="module" as they're not ES modules -->
-  <script src="./src/assets/ScrollTrigger.min.js"></script>
-  <script src="./src/assets/SplitText.min.js"></script>
-  <script src="./src/assets/gsap1.min.js"></script>
-  <script src="./src/assets/script1.js"></script>
-  <script src="./src/assets/script2.js"></script>
-  <script src="./src/assets/selectcustom.js"></script>
+  <!-- Removed duplicate local asset scripts - they were causing 404 errors in production -->
+  <!-- ScrollTrigger, SplitText, and selectcustom are already loaded from CDN above -->
+  <!-- script1.js and script2.js (Webflow/HubSpot) are loaded via CDN or inline scripts above -->
 
 
 
@@ -252,8 +248,25 @@
   <noscript><link rel="stylesheet" href="https://unpkg.com/lenis@1.3.1/dist/lenis.css" /></noscript>
   <script src="https://unpkg.com/lenis@1.3.1/dist/lenis.min.js" defer></script>
   <script>
+    // Detect mobile/touch devices
+    function isMobileDevice() {
+      const uaMatch = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+      const viewportMatch = window.matchMedia && window.matchMedia("(max-width: 991px)").matches;
+      const touchMatch = 'ontouchstart' in window;
+      return uaMatch || viewportMatch || touchMatch;
+    }
+
     // Wait for GSAP to be available
     function initLenis() {
+      // Disable Lenis on mobile devices for native scrolling
+      if (isMobileDevice()) {
+        // Ensure native scrolling works on mobile
+        document.documentElement.style.overflowY = 'auto';
+        document.body.style.overflowY = 'auto';
+        document.documentElement.classList.remove('lenis', 'lenis-smooth');
+        return;
+      }
+
       if (typeof Lenis !== 'undefined') {
         const lenis = new Lenis({
           duration: 1.2,

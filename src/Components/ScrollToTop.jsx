@@ -6,8 +6,19 @@ const ScrollToTop = () => {
 
   useEffect(() => {
     // Scroll to top on route change
-    // Works with Lenis smooth scroll
-    if (window.lenis) {
+    // Check if mobile device
+    const isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ||
+                     (window.matchMedia && window.matchMedia("(max-width: 991px)").matches);
+    
+    if (isMobile) {
+      // Use native scroll on mobile
+      window.scrollTo({
+        top: 0,
+        left: 0,
+        behavior: "auto",
+      });
+    } else if (window.lenis) {
+      // Use Lenis on desktop
       window.lenis.scrollTo(0, { immediate: true });
     } else {
       window.scrollTo({
