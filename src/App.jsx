@@ -5,6 +5,7 @@ import { Route, Routes } from "react-router-dom";
 import ScrollToTop from "./Components/ScrollToTop";
 import WhatsAppButton from "./Components/WhatsAppButton";
 import { mainLogo } from "./Components/Image";
+import PopupMessage from "./Components/PopupMessage";
 import "./App.css";
 
 // Lazy load pages for code splitting
@@ -40,6 +41,7 @@ const App = () => {
   return (
     <>
       <ScrollToTop />
+         <PopupMessage/>
       <WhatsAppButton />
       <div className="page-wrapper">
         <div className="global-styles">
@@ -48,6 +50,7 @@ const App = () => {
           <div className="hubspot-styles w-embed">Custom Styles</div>
         </div>
         <Header />
+    
         <Suspense fallback={<PageLoader />}>
           <Routes>
             <Route element={<Home />} path="/" />

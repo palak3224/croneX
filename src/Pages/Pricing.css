@@ -449,3 +449,166 @@ body {
     margin: 0 2px;
   }
 }
+
+/* pricing css */
+.pricing-page-wrapper {
+  background-color: #05070a; 
+  color: #ffffff;
+  font-family: 'Inter', sans-serif;
+}
+
+.mfd-pricing-section {
+  padding: 80px 20px;
+  background: radial-gradient(circle at top, #1a1b3a 0%, #05070a 100%);
+}
+
+.mfd-header {
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.mfd-title {
+  font-size: 3rem;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.mfd-subtitle {
+  color: #94a3b8;
+  font-size: 1.1rem;
+}
+
+.mfd-grid {
+  display: flex; 
+  justify-content: center; 
+  align-items: stretch; 
+  gap: 20px; 
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+  flex-wrap: nowrap; 
+}
+
+.mfd-card {
+  flex: 1; 
+  min-width: 300px; 
+  max-width: 380px; 
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 24px;
+  padding: 30px 25px; 
+  backdrop-filter: blur(10px);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1), 
+              border-color 0.3s ease, 
+              box-shadow 0.3s ease;
+  will-change: transform; 
+}
+
+.mfd-card:hover {
+  transform: translateY(-12px);
+  border-color: rgba(99, 102, 241, 0.5);
+}
+
+
+.mfd-card.popular {
+  border: 2px solid #6366f1;
+  background: rgba(99, 102, 241, 0.05);
+  box-shadow: 0 0 40px rgba(99, 102, 241, 0.15);
+}
+
+.popular-badge {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  background: #6366f1;
+  padding: 4px 12px;
+  border-radius: 20px;
+  font-size: 0.75rem;
+  font-weight: bold;
+}
+
+/* Typography & List */
+.plan-name { color: #bcc9da; font-size: 1.1rem; }
+.plan-deliver {color: #6d7581; font-size: 0.9rem; padding-top:7px;}
+.plan-price { font-size: 1.6rem; margin: 15px 0; }
+.plan-desc { color: #64748b; margin-bottom: 30px; height: 50px; }
+
+.features-label {
+  font-size: 0.75rem;
+  letter-spacing: 1px;
+  color: #475569;
+  margin-bottom: 20px;
+}
+
+.card-features ul {
+  list-style: none;
+  padding: 0;
+}
+
+.card-features li {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 15px;
+  font-size: 0.95rem;
+  color: #cbd5e1;
+}
+
+.card-features .icon {
+  font-size: 18px;
+  color: #6366f1;
+}
+
+
+.mfd-btn {
+  width: 100%;
+  padding: 14px;
+  border-radius: 12px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.3s;
+}
+.mfd-btn:hover{
+  background-color: rgba(99, 102, 241, 0.15);
+}
+
+.mfd-btn.ghost {
+  background: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  color: white;
+}
+
+.mfd-btn.solid {
+  background: #6366f1;
+  border: none;
+  color: white;
+}
+
+.mfd-btn.solid:hover { background: #4f46e5; }
+
+.section-divider {
+  border: 0;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(255,255,255,0.1), transparent);
+  margin: 40px 0;
+}
+
+
+@media (max-width: 1024px) {
+  .mfd-grid {
+    flex-wrap: wrap; 
+  }
+  
+  .mfd-card {
+    flex: 1 1 45%; 
+  }
+}
+
+@media (max-width: 768px) {
+  .mfd-card {
+    flex: 1 1 100%; 
+  }
+}

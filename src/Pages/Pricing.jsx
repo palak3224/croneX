@@ -289,6 +289,83 @@ ${formatSelections('urgency', urgencyOptions)}
     <PricingHeader/>
 </div>
 
+{/* MFD Pricing Section */}
+      <section className="mfd-pricing-section">
+        <div className="container">
+          <div className="mfd-header">
+            <h1 className="mfd-title">A plan for every need</h1>
+            <p className="mfd-subtitle">Safety trade, earn, & borrow digital assets with top-tier security.</p>
+          </div>
+
+          <div className="mfd-grid">
+            <div className="mfd-card">
+              <div className="card-top">
+                <span className="plan-name">MFD Starter Plan</span>
+                <p className="plan-deliver"> DELIVERY (6–8 DAYS)</p>
+                <h2 className="plan-price">₹12,000 – ₹18,000</h2>
+                <p className="plan-desc">Ideal for individual MFDs & new financial advisors</p>
+                <button className="mfd-btn ghost">Get started</button>
+              </div>
+              <div className="card-features">
+                <p className="features-label">FEATURES</p>
+                <ul>
+                  <li><CheckCircle className="icon" /> Up to 5 Pages</li>
+                  <li><CheckCircle className="icon" /> Finance-Themed UI</li>
+                  <li><CheckCircle className="icon" /> Mobile-Responsive</li>
+                  <li><CheckCircle className="icon" /> WhatsApp Integration</li>
+                  <li><CheckCircle className="icon" /> Basic SEO</li>
+                </ul>
+              </div>
+            </div>
+
+          
+            <div className="mfd-card popular">
+              <div className="popular-badge">Most Preferred</div>
+              <div className="card-top">
+                <span className="plan-name">MFD Growth Plan</span>
+                  <p className="plan-deliver"> DELIVERY (10-14 DAYS)</p>
+                <h2 className="plan-price">₹25,000 – ₹40,000</h2>
+                <p className="plan-desc">Established MFDs & wealth advisors</p>
+                <button className="mfd-btn solid">Get started</button>
+              </div>
+              <div className="card-features">
+                <p className="features-label">FEATURES</p>
+                <ul>
+                  <li><CheckCircle className="icon" /> Up to 12 Pages</li>
+                  <li><CheckCircle className="icon" /> Investor Onboarding</li>
+                  <li><CheckCircle className="icon" /> SIP / Lumpsum CTA</li>
+                  <li><CheckCircle className="icon" /> Compliance-Ready</li>
+                  <li><CheckCircle className="icon" /> Market Updates Blog</li>
+                </ul>
+              </div>
+            </div>
+
+         
+            <div className="mfd-card">
+              <div className="card-top">
+                <span className="plan-name">Fintech Pro Plan</span>
+                  <p className="plan-deliver"> DELIVERY (18-30 DAYS)</p>
+                <h2 className="plan-price">₹60,000+</h2>
+                <p className="plan-desc">Fintech platforms & digital wealth startups</p>
+                <button className="mfd-btn ghost">Get started</button>
+              </div>
+              <div className="card-features">
+                <p className="features-label">FEATURES</p>
+                <ul>
+                  <li><CheckCircle className="icon" /> Unlimited Pages</li>
+                  <li><CheckCircle className="icon" /> BSE / RTA Integration</li>
+                  <li><CheckCircle className="icon" /> AI Chatbot Integration</li>
+                  <li><CheckCircle className="icon" /> Multi-Language Support</li>
+                  <li><CheckCircle className="icon" /> Priority Support</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <hr className="section-divider" />
+
     <div className='page-container' ref={calculatorRef}>
           <h1 className="title">App and Web <span className="text-gradient-grey">Cost Calculator</span></h1>
       <p className="subtitle">Get a cost estimation for your mobile app or website by answering the following questions</p>
