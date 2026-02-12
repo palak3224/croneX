@@ -314,6 +314,7 @@ ${formatSelections('urgency', urgencyOptions)}
                   <li><CheckCircle className="icon" /> Mobile-Responsive</li>
                   <li><CheckCircle className="icon" /> WhatsApp Integration</li>
                   <li><CheckCircle className="icon" /> Basic SEO</li>
+                  <li className="icon rev">1 Revision</li>
                 </ul>
               </div>
             </div>
@@ -336,6 +337,8 @@ ${formatSelections('urgency', urgencyOptions)}
                   <li><CheckCircle className="icon" /> SIP / Lumpsum CTA</li>
                   <li><CheckCircle className="icon" /> Compliance-Ready</li>
                   <li><CheckCircle className="icon" /> Market Updates Blog</li>
+           
+                  <li className='icon rev'>3 Revision</li>
                 </ul>
               </div>
             </div>
@@ -345,7 +348,7 @@ ${formatSelections('urgency', urgencyOptions)}
               <div className="card-top">
                 <span className="plan-name">Fintech Pro Plan</span>
                   <p className="plan-deliver"> DELIVERY (18-30 DAYS)</p>
-                <h2 className="plan-price">₹60,000+</h2>
+                <h2 className="plan-price">₹60,000+<span className='add'>(Custom quotes)</span></h2>
                 <p className="plan-desc">Fintech platforms & digital wealth startups</p>
                 <button className="mfd-btn ghost">Get started</button>
               </div>
@@ -357,6 +360,7 @@ ${formatSelections('urgency', urgencyOptions)}
                   <li><CheckCircle className="icon" /> AI Chatbot Integration</li>
                   <li><CheckCircle className="icon" /> Multi-Language Support</li>
                   <li><CheckCircle className="icon" /> Priority Support</li>
+                  <li className="icon rev">Unlimited Revision</li>
                 </ul>
               </div>
             </div>
@@ -364,7 +368,68 @@ ${formatSelections('urgency', urgencyOptions)}
         </div>
       </section>
 
+      {/* Standard Features & Add-ons Section */}
+<section className="mfd-extras">
+  <div className="mfd-container">
+    
+    <div className="trust-box">
+      <div className="trust-header">
+        <div className="trust-title-wrapper">
+          <h3 className="trust-title">Standard Trust Features <span className="label-included">(Included in All Plans)</span></h3>
+        </div>
+        <p className="trust-subtitle">Stay compliant with SEBI and industry standards automatically.</p>
+      </div>
+      
+      <div className="trust-grid">
+        <div className="trust-item">
+          <CheckCircle className="check-icon" />
+          <div>
+            <strong>SEBI-Friendly Disclosures</strong>
+            <p>Automated placement for regulatory text.</p>
+          </div>
+        </div>
+        <div className="trust-item">
+          <CheckCircle className="check-icon" />
+          <div>
+            <strong>Risk Disclaimers</strong>
+            <p>Standardized Mutual Fund risk sections.</p>
+          </div>
+        </div>
+        <div className="trust-item">
+          <CheckCircle className="check-icon" />
+          <div>
+            <strong>Data Privacy</strong>
+            <p>GDPR/Data security compliant forms.</p>
+          </div>
+        </div>
+        <div className="trust-item">
+          <CheckCircle className="check-icon" />
+          <div>
+            <strong>HTTPS & Security</strong>
+            <p>Fully encrypted browsing for investor safety.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div className="addons-section">
+      <h1 className="addons-title">Optional Fintech Add-Ons</h1>
+      <div className="addons-grid">
+        <div className="addon-tag">Investor Onboarding Automation</div>
+        <div className="addon-tag">SIP Calculator & Goal Planner</div>
+        <div className="addon-tag">CRM Integration (Zoho/Salesforce)</div>
+        <div className="addon-tag">Mobile App Development</div>
+         <div className="addon-tag">AMC / RTA Integration</div>
+        <div className="addon-tag">Ongoing Compliance Updates</div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
       <hr className="section-divider" />
+
+      
 
     <div className='page-container' ref={calculatorRef}>
           <h1 className="title">App and Web <span className="text-gradient-grey">Cost Calculator</span></h1>

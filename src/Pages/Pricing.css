@@ -458,7 +458,7 @@ body {
 }
 
 .mfd-pricing-section {
-  padding: 80px 20px;
+  padding: 60px 20px;
   background: radial-gradient(circle at top, #1a1b3a 0%, #05070a 100%);
 }
 
@@ -496,7 +496,7 @@ body {
   background: rgba(255, 255, 255, 0.03);
   border: 1px solid rgba(255, 255, 255, 0.1);
   border-radius: 24px;
-  padding: 30px 25px; 
+  padding: 25px 20px; 
   backdrop-filter: blur(10px);
   display: flex;
   flex-direction: column;
@@ -534,13 +534,15 @@ body {
 .plan-name { color: #bcc9da; font-size: 1.1rem; }
 .plan-deliver {color: #6d7581; font-size: 0.9rem; padding-top:7px;}
 .plan-price { font-size: 1.6rem; margin: 15px 0; }
-.plan-desc { color: #64748b; margin-bottom: 30px; height: 50px; }
+.plan-desc { color: #64748b; margin-bottom: 25px; height: 50px; }
+ .add { font-size: 0.97rem;}
 
+ 
 .features-label {
   font-size: 0.75rem;
   letter-spacing: 1px;
   color: #475569;
-  margin-bottom: 20px;
+  margin-bottom: 15px;
 }
 
 .card-features ul {
@@ -561,7 +563,9 @@ body {
   font-size: 18px;
   color: #6366f1;
 }
-
+.card-features .icon .rev{
+  font-size: 13px;
+}
 
 .mfd-btn {
   width: 100%;
@@ -581,6 +585,9 @@ body {
   color: white;
 }
 
+.mfd-btn.ghost:hover{
+   background: #4f46e5; 
+}
 .mfd-btn.solid {
   background: #6366f1;
   border: none;
@@ -611,4 +618,74 @@ body {
   .mfd-card {
     flex: 1 1 100%; 
   }
+}
+
+/* Trust Features Section */
+.mfd-extras {
+  padding: 30px 20px 50px;
+}
+
+.trust-box {
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  border-radius: 24px;
+  padding: 40px;
+  margin-bottom: 50px;
+  max-width: 1200px;
+  margin-inline: auto;
+}
+
+.trust-header { margin-bottom: 30px; }
+.trust-title-wrapper { display: flex; align-items: center; gap: 12px; margin-bottom: 8px; }
+.trust-icon-main { color: #6366f1; font-size: 28px !important; }
+.trust-title { font-size: 1.5rem; font-weight: 700; margin: 0; }
+.label-included {  color: #6366f1; font-size: 0.9rem; font-weight: 500; margin-left: 10px; }
+.trust-subtitle { color: #64748b; font-size: 1rem; }
+
+.trust-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 30px;
+}
+
+.trust-item { display: flex; gap: 15px; }
+.trust-item strong { display: block; color: #f8fafc; font-size: 0.95rem; margin-bottom: 4px; }
+.trust-item p { color: #64748b; font-size: 0.85rem; margin: 0; line-height: 1.4; }
+.check-icon { color:#6366f1; font-size: 20px !important; margin-top: 2px; }
+
+
+.addons-section { text-align: center; max-width: 1200px; margin: 0 auto;background: rgba(255, 255, 255, 0.02);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  border-radius: 24px; }
+.addons-title { font-size: 1.5rem; margin:20px 0 25px 27px ; text-align: left; color:#c2c7cf;}
+
+.addons-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 12px;
+  margin-bottom: 15px;
+}
+
+.addon-tag {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 10px 20px;
+  border-radius: 50px;
+  font-size: 0.85rem;
+  color: #cbd5e1;
+  transition: 0.3s;
+}
+
+.addon-tag:hover {
+  /* border-color: #6366f1; */
+  background: rgba(99, 102, 241, 0.1);
+  /* color: #a5b4fc; */
+    /* transform: scale(1.05); */
+}
+
+
+@media (max-width: 768px) {
+  .trust-box { padding: 25px; }
+  .trust-title { font-size: 1.2rem; }
 }
