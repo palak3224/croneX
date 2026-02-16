@@ -70,7 +70,7 @@ const PopupMessage = () => {
                 <span className="text-gradient-blue">Inquiry</span>
               </h3>
               <p className="text-size-small" style={{ marginBottom: '1rem' }}>
-                Need help with your FinTech vision? Drop a message!
+                Need help with your Software development vision? Drop a message!
               </p>
 
               <form onSubmit={onSubmit} className="popup-form-layout">

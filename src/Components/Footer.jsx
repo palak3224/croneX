@@ -235,8 +235,8 @@ const Footer = memo(() => {
 
                 <div className="footer_bottom-wrapper">
                   <div className="text-color-tertiary text-size-regular">
-                    Copyright © <span className="footer_credit-year">2025</span>{" "}
-                    croneX Tech All rights reserved.
+                    Copyright © <span className="footer_credit-year">2026</span>{" "}
+                    croneX Global Technologies All rights reserved.
                   </div>
 
                   <div className="footer_legal-list">
