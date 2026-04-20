@@ -26,7 +26,7 @@ const PageLoader = () => (
       <div className="page-loader-logo-wrapper">
         <img 
           src={mainLogo} 
-          alt="croneX Tech" 
+          alt="croneX Global Technologies" 
           className="page-loader-logo"
           loading="eager"
         />

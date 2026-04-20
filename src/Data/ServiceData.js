@@ -6,7 +6,7 @@ export const ServiceData = [
   //   slug: "finTech-specific",
   //   image: "",
   //   content:
-  //     "croneX Tech specializes in end-to-end FinTech software and application development designed for Mutual Funds, Stock Markets, Insurance, and complex transaction systems. We build secure, scalable, and high-performance solutions that streamline financial operations, enhance customer experiences, and ensure regulatory compliance.",
+  //     "croneX Global Technologies specializes in end-to-end FinTech software and application development designed for Mutual Funds, Stock Markets, Insurance, and complex transaction systems. We build secure, scalable, and high-performance solutions that streamline financial operations, enhance customer experiences, and ensure regulatory compliance.",
   // },
   // {
   //   id: 2,
@@ -106,7 +106,7 @@ export const ServiceData = [
   //   slug: "finTech-specific",
   //   image: "",
   //   content:
-  //     "croneX Tech specializes in end-to-end FinTech software and application development designed for Mutual Funds, Stock Markets, Insurance, and complex transaction systems. We build secure, scalable, and high-performance solutions that streamline financial operations, enhance customer experiences, and ensure regulatory compliance.",
+  //     "croneX Global Technologies specializes in end-to-end FinTech software and application development designed for Mutual Funds, Stock Markets, Insurance, and complex transaction systems. We build secure, scalable, and high-performance solutions that streamline financial operations, enhance customer experiences, and ensure regulatory compliance.",
   // },
   // {
   //   id: 9,

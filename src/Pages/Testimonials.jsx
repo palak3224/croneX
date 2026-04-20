@@ -32,7 +32,7 @@ const Testimonials = () => {
                         className="home_testimonials_item is-large"
                       >
                         <div className="text-size-large">
-                          "croneX Tech transformed our financial operations with
+                          "croneX Global Technologies transformed our financial operations with
                           a secure and high-performance digital platform. Their
                           understanding of Mutual Funds and transaction systems
                           is exceptional. The team delivered on time, stayed
@@ -60,7 +60,7 @@ const Testimonials = () => {
                       >
                         <div className="text-size-large">
                           "Their cloud migration and AI automation expertise
-                          helped us reduce operational costs by 40%. croneX Tech
+                          helped us reduce operational costs by 40%. croneX Global Technologies
                           is more than a technology partner— they are strategic
                           problem-solvers who understand real business
                           challenges. The seamless transition to cloud infrastructure exceeded our expectations."
@@ -88,7 +88,7 @@ const Testimonials = () => {
                         <div>
                           <div className="spacer-xxtiny"></div>
                           <div className="text-size-medium">
-                            The custom software built by croneX Tech streamlined
+                            The custom software built by croneX Global Technologies streamlined
                             our internal processes and improved client
                             experience significantly. Their attention to detail and commitment to quality is remarkable.
                           </div>
@@ -137,7 +137,7 @@ const Testimonials = () => {
                         className="home_testimonials_item is-large"
                       >
                         <div className="text-size-large">
-                          "croneX Tech helped us strengthen our security
+                          "croneX Global Technologies helped us strengthen our security
                           infrastructure and ensured full compliance with
                           industry regulations. Their cybersecurity team is
                           knowledgeable, proactive, and reliable. We've had zero security incidents since implementation."
@@ -161,7 +161,7 @@ const Testimonials = () => {
                         className="home_testimonials_item is-large"
                       >
                         <div className="text-size-large">
-                          "Working with croneX Tech on our digital transformation journey has been exceptional. Their AI-driven solutions automated our workflows, reducing manual work by 50% and improving overall efficiency. Highly recommended!"
+                          "Working with croneX Global Technologies on our digital transformation journey has been exceptional. Their AI-driven solutions automated our workflows, reducing manual work by 50% and improving overall efficiency. Highly recommended!"
                         </div>
                         <div className="spacer-large"></div>
                         <div className="home_testimonials_author-wrapper">

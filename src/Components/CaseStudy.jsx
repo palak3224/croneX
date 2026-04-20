@@ -60,7 +60,7 @@ const CaseStudy = () => {
                         transform: "translate(0px, 0px)",
                       }}
                     >
-                      Our case studies showcase how croneX Tech helps businesses
+                      Our case studies showcase how croneX Global Technologies helps businesses
                       solve complex challenges through intelligent technology
                       solutions. From scalable FinTech platforms to
                       enterprise-grade software, each project reflects our

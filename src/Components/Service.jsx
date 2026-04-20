@@ -29,7 +29,7 @@ const Service = () => {
                         slide-in=""
                         className="text-size-large text-color-secondary"
                       >
-                        At croneX Tech, we deliver end-to-end technology
+                        At croneX Global Technologies, we deliver end-to-end technology
                         solutions that empower organizations to innovate, scale,
                         and stay secure in the digital era.
                       </p>

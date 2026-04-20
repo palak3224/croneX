@@ -22,7 +22,7 @@ export const SeaprateServiceData = [
     sectionTag: "USECASEs",
     sectionTitle: "All Web Development Solutions",
     sectionDescription:
-      "croneX Tech delivers end-to-end web development solutions tailored to the unique needs of businesses, startups, and enterprises. Our expertise covers responsive websites, e-commerce platforms, CMS development, and high-performance web applications.",
+      "croneX Global Technologies delivers end-to-end web development solutions tailored to the unique needs of businesses, startups, and enterprises. Our expertise covers responsive websites, e-commerce platforms, CMS development, and high-performance web applications.",
     tabs: [
       {
         label: "Custom Websites",
@@ -105,7 +105,7 @@ export const SeaprateServiceData = [
     sectionTag: "USECASEs",
     sectionTitle: "All Mobile App Development Solutions",
     sectionDescription:
-      "croneX Tech delivers end-to-end mobile app development solutions tailored to the unique needs of businesses across industries. Our expertise covers native iOS, Android, and cross-platform app development with focus on performance, security, and user experience.",
+      "croneX Global Technologies delivers end-to-end mobile app development solutions tailored to the unique needs of businesses across industries. Our expertise covers native iOS, Android, and cross-platform app development with focus on performance, security, and user experience.",
     tabs: [
       {
         label: "Native Development",
@@ -188,7 +188,7 @@ export const SeaprateServiceData = [
     sectionTag: "USECASEs",
     sectionTitle: "All Custom Software Solutions",
     sectionDescription:
-      "croneX Tech delivers end-to-end custom software development solutions tailored to the unique needs of businesses across industries. Our expertise covers enterprise software, SaaS products, CRM/ERP systems, and workflow automation solutions.",
+      "croneX Global Technologies delivers end-to-end custom software development solutions tailored to the unique needs of businesses across industries. Our expertise covers enterprise software, SaaS products, CRM/ERP systems, and workflow automation solutions.",
     tabs: [
       {
         label: "Enterprise Software",
@@ -271,7 +271,7 @@ export const SeaprateServiceData = [
     sectionTag: "USECASEs",
     sectionTitle: "All Branding & Marketing Solutions",
     sectionDescription:
-      "croneX Tech delivers end-to-end branding and digital marketing solutions tailored to the unique needs of businesses. Our expertise covers brand identity, SEO, content marketing, and performance-driven campaigns that drive growth.",
+      "croneX Global Technologies delivers end-to-end branding and digital marketing solutions tailored to the unique needs of businesses. Our expertise covers brand identity, SEO, content marketing, and performance-driven campaigns that drive growth.",
     tabs: [
       {
         label: "Brand Identity",
@@ -354,7 +354,7 @@ export const SeaprateServiceData = [
     sectionTag: "USECASEs",
     sectionTitle: "All IT Infrastructure Solutions",
     sectionDescription:
-      "croneX Tech delivers end-to-end IT services tailored to the unique needs of businesses. Our expertise covers cloud migration, DevOps automation, cybersecurity, and managed IT services that keep your infrastructure secure and scalable.",
+      "croneX Global Technologies delivers end-to-end IT services tailored to the unique needs of businesses. Our expertise covers cloud migration, DevOps automation, cybersecurity, and managed IT services that keep your infrastructure secure and scalable.",
     tabs: [
       {
         label: "Cloud Services",
@@ -437,7 +437,7 @@ export const SeaprateServiceData = [
     sectionTag: "USECASEs",
     sectionTitle: "All Integration & Automation Solutions",
     sectionDescription:
-      "croneX Tech delivers end-to-end integration and automation solutions tailored to the unique needs of businesses. Our expertise covers API integrations, system connectivity, and workflow automation that eliminates data silos.",
+      "croneX Global Technologies delivers end-to-end integration and automation solutions tailored to the unique needs of businesses. Our expertise covers API integrations, system connectivity, and workflow automation that eliminates data silos.",
     tabs: [
       {
         label: "API Integrations",

@@ -31,6 +31,7 @@ const Pricing = () => {
   const [showSuccessModal, setShowSuccessModal] = useState(false);
   const [errorMessage, setErrorMessage] = useState('');
   const calculatorRef = useRef(null);
+  const userInteractedRef = useRef(false);
   const navigate = useNavigate();
 
   const techOptions = [
@@ -106,6 +107,7 @@ const Pricing = () => {
   };
 
   const handleNext = () => {
+    userInteractedRef.current = true;
     if (step === 1 && selections.tech.length === 0) {
       alert('Please select at least one technology stack.');
       return;
@@ -116,19 +118,27 @@ const Pricing = () => {
   };
 
   const handleBack = () => {
+    userInteractedRef.current = true;
     if (step > 1) {
       setStep(step - 1);
     }
   };
 
   const handleSkip = () => {
+    userInteractedRef.current = true;
     if (step < 6) {
       setStep(step + 1);
     }
   };
 
+  // Always start Pricing page from the top on first load
+  useEffect(() => {
+    window.scrollTo({ top: 0, left: 0, behavior: 'auto' });
+  }, []);
+
   // Auto-scroll when step changes
   useEffect(() => {
+    if (!userInteractedRef.current) return;
     // Small delay to ensure DOM has updated
     const timer = setTimeout(() => {
       scrollToCalculator();
@@ -302,7 +312,7 @@ ${formatSelections('urgency', urgencyOptions)}
           <div className="mfd-grid">
             <div className="mfd-card">
               <div className="card-top">
-                <span className="plan-name">MFD Starter Plan</span>
+                <span className="plan-name">Starter Plan</span>
                 <p className="plan-deliver"> DELIVERY (6–8 DAYS)</p>
                 <h2 className="plan-price">₹12,000 – ₹18,000</h2>
                 <p className="plan-desc">Ideal for individual MFDs & new financial advisors</p>
@@ -341,7 +351,7 @@ ${formatSelections('urgency', urgencyOptions)}
             <div className="mfd-card popular">
               <div className="popular-badge">Most Preferred</div>
               <div className="card-top">
-                <span className="plan-name">MFD Growth Plan</span>
+                <span className="plan-name">Growth Plan</span>
                   <p className="plan-deliver"> DELIVERY (10-14 DAYS)</p>
                 <h2 className="plan-price">₹25,000 – ₹40,000</h2>
                 <p className="plan-desc">Established MFDs & wealth advisors</p>

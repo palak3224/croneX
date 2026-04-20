@@ -29,6 +29,26 @@ import {
 
 export const ProjectData = [
   {
+    id: 8,
+    title: "ArthVidhi",
+    description:
+      "ArthVidhi is a modern financial planning and mutual fund advisory website designed to help individuals make smarter investment decisions through structured planning, expert guidance, and intuitive financial tools. The platform provides a complete ecosystem for wealth management, including retirement planning, SIP calculators, goal-based investment strategies, and personalized financial solutions. With a clean and professional interface, ArthVidhi simplifies complex financial concepts and enables users to plan, track, and grow their wealth with confidence.",
+    features: [
+      "Comprehensive financial planning system with goal-based investment strategies",
+      "Built-in investment tools including SIP, SWP, and retirement calculators",
+      "Clear service sections for mutual funds, insurance, and wealth structuring",
+      "Step-by-step financial journey visualization for users",
+      "Client testimonials and trust-building sections for credibility",
+      "Modern, responsive UI with a premium and professional design",
+    ],
+    images: [
+      "https://res.cloudinary.com/ddnb10zkq/image/upload/v1776712334/Screenshot_2026-04-21_at_12.42.02_AM_mty9ju.png",
+      "https://res.cloudinary.com/ddnb10zkq/image/upload/v1776712363/Screenshot_2026-04-21_at_12.42.38_AM_vkewqm.png",
+      "https://res.cloudinary.com/ddnb10zkq/image/upload/v1776712443/Screenshot_2026-04-21_at_12.43.57_AM_zd3gjb.png",
+      "https://res.cloudinary.com/ddnb10zkq/image/upload/v1776712499/Screenshot_2026-04-21_at_12.44.50_AM_uywiv1.png",
+    ],
+  },
+  {
     id: 1,
     title: "Exploremfs",
     description:
@@ -41,6 +61,48 @@ export const ProjectData = [
       "Modern, responsive UI focused on clarity and ease of use",
     ],
     images: [projectImg13, projectImg14, projectImg15, projectImg16],
+  },
+  {
+    id: 9,
+    title: "RS Financial Solutions",
+    description:
+      "RS Financial Solutions is a comprehensive financial services and advisory platform designed to provide users with end-to-end support across investments, insurance, taxation, and business compliance. The platform combines a professional corporate website with powerful goal-based financial calculators, market insights, and service offerings, enabling individuals and businesses to plan, manage, and optimize their financial decisions efficiently. With a structured layout and user-friendly interface, it simplifies complex financial processes and builds trust through transparency and expert-driven solutions.",
+    features: [
+      "Goal-based financial calculators including SIP, EMI, and tax estimators",
+      "Integrated market news section for real-time financial insights",
+      "Comprehensive service offerings covering investment, taxation, insurance, and loans",
+      "Corporate-level service categories including GST, legal, and accounting solutions",
+      "Client testimonials and trust-building UI sections",
+      "Contact and lead generation system for client inquiries",
+      "Clean, structured, and professional UI for better usability",
+    ],
+    images: [
+      "https://res.cloudinary.com/ddnb10zkq/image/upload/v1776713602/Screenshot_2026-04-21_at_1.02.51_AM_kfiviw.png",
+      "https://res.cloudinary.com/ddnb10zkq/image/upload/v1776713603/Screenshot_2026-04-21_at_1.03.17_AM_bogiid.png",
+      "https://res.cloudinary.com/ddnb10zkq/image/upload/v1776713634/Screenshot_2026-04-21_at_1.03.49_AM_lr3fc6.png",
+      "https://res.cloudinary.com/ddnb10zkq/image/upload/v1776713673/Screenshot_2026-04-21_at_1.04.27_AM_i4cwzc.png",
+    ],
+  },
+  {
+    id: 10,
+    title: "Mukta Universal",
+    description:
+      "Mukta Universal is a professional financial advisory and mutual fund investment platform focused on helping individuals build long-term wealth through ethical and goal-based investing strategies. The platform offers a clean and intuitive interface that combines financial calculators, investment services, and expert guidance to simplify decision-making. With a strong emphasis on trust, transparency, and user experience, Mukta Universal enables users to explore financial products, plan investments, and connect with advisors seamlessly.",
+    features: [
+      "Goal-based financial calculators including SIP, SWP, and delay cost tools",
+      "Mutual fund investment and wealth-building service offerings",
+      "Insurance, loans, and tax planning solutions in a structured layout",
+      "AMC partner showcase to build credibility and trust",
+      "Client testimonials section for social proof",
+      "Clean, minimal, and user-friendly UI design",
+      "Contact and inquiry system for lead generation",
+    ],
+    images: [
+      "https://res.cloudinary.com/ddnb10zkq/image/upload/v1776714272/Screenshot_2026-04-21_at_1.14.23_AM_ldwgp1.png",
+      "https://res.cloudinary.com/ddnb10zkq/image/upload/v1776714345/Screenshot_2026-04-21_at_1.15.39_AM_l9pvto.png",
+      "https://res.cloudinary.com/ddnb10zkq/image/upload/v1776714296/Screenshot_2026-04-21_at_1.14.50_AM_qwkcxi.png",
+      "https://res.cloudinary.com/ddnb10zkq/image/upload/v1776714383/Screenshot_2026-04-21_at_1.16.17_AM_dsk9zn.png",
+    ],
   },
   {
     id: 2,

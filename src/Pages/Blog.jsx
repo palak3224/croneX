@@ -33,7 +33,7 @@ const Blog = () => {
                     <div>
                       <p className="text-size-large">
                         The latest articles, news, blogs and learnings from
-                        croneX Tech.
+                        croneX Global Technologies.
                       </p>
                     </div>
                   </div>

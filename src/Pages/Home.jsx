@@ -347,7 +347,7 @@ const Home = () => {
                           </h1>
                           <div className="spacer-small"></div>
                           <p slide-in-header="" className="text-size-medium">
-                            croneX Tech is a global IT solutions company
+                            croneX Global Technologies is a global IT solutions company
                             creating high-performance, secure, and scalable
                             software. We help startups and enterprises unlock
                             growth through innovation, automation, and
@@ -738,7 +738,7 @@ const Home = () => {
                         <div className="spacer-xsmall"></div>
                         <div>
                           <p className="text-size-large">
-                            croneX Tech is a forward-thinking IT solutions
+                            croneX Global Technologies is a forward-thinking IT solutions
                             company delivering advanced Software Development,
                             Cloud Engineering, AI-driven platforms, and Digital
                             Transformation services to global enterprises. With
@@ -812,7 +812,7 @@ const Home = () => {
                         className="home_testimonials_item is-large"
                       >
                         <div className="text-size-large">
-                          "croneX Tech transformed our financial operations with
+                          "croneX Global Technologies transformed our financial operations with
                           a secure and high-performance digital platform. Their
                           understanding of Mutual Funds and transaction systems
                           is exceptional. The team delivered on time, stayed
@@ -851,7 +851,7 @@ const Home = () => {
                       >
                         <div className="text-size-large">
                           "Their cloud migration and AI automation expertise
-                          helped us reduce operational costs by 40%. croneX Tech
+                          helped us reduce operational costs by 40%. croneX Global Technologies
                           is more than a technology partner— they are strategic
                           problem-solvers who understand real business
                           challenges. The seamless transition to cloud infrastructure exceeded our expectations."
@@ -885,7 +885,7 @@ const Home = () => {
                         <div>
                           <div className="spacer-xxtiny"></div>
                           <div className="text-size-medium">
-                            The custom software built by croneX Tech streamlined
+                            The custom software built by croneX Global Technologies streamlined
                             our internal processes and improved client
                             experience significantly. Their attention to detail and commitment to quality is remarkable.
                           </div>
@@ -940,7 +940,7 @@ const Home = () => {
                         className="home_testimonials_item is-large"
                       >
                         <div className="text-size-large">
-                          "croneX Tech helped us strengthen our security
+                          "croneX Global Technologies helped us strengthen our security
                           infrastructure and ensured full compliance with
                           industry regulations. Their cybersecurity team is
                           knowledgeable, proactive, and reliable. We've had zero security incidents since implementation."
@@ -975,7 +975,7 @@ const Home = () => {
                         className="home_testimonials_item is-large"
                       >
                         <div className="text-size-large">
-                          "Working with croneX Tech on our digital transformation journey has been exceptional. Their AI-driven solutions automated our workflows, reducing manual work by 50% and improving overall efficiency. Highly recommended!"
+                          "Working with croneX Global Technologies on our digital transformation journey has been exceptional. Their AI-driven solutions automated our workflows, reducing manual work by 50% and improving overall efficiency. Highly recommended!"
                         </div>
                         <div className="spacer-large"></div>
                         <div className="home_testimonials_author-wrapper">
@@ -9646,7 +9646,7 @@ const Home = () => {
                                 <Typography component="span">
                                   <div className="faq_question-content">
                                     <h3 className="text-size-large">
-                                      What services does croneX Tech provide?
+                                      What services does croneX Global Technologies provide?
                                       <br />
                                     </h3>
                                     <div className="faq_icon-wrappper">
@@ -9676,7 +9676,7 @@ const Home = () => {
                               <AccordionDetails className="faq_answer">
                                 <div className="spacer-small"></div>
                                 <p className="text-color-secondary">
-                                  croneX Tech offers end-to-end IT solutions
+                                  croneX Global Technologies offers end-to-end IT solutions
                                   including custom software development, FinTech
                                   solutions, web and mobile application
                                   development, AI-powered automation, and
@@ -9694,7 +9694,7 @@ const Home = () => {
                                 <Typography component="span">
                                   <div className="faq_question-content">
                                     <h3 className="text-size-large">
-                                      Does croneX Tech specialize in FinTech
+                                      Does croneX Global Technologies specialize in FinTech
                                       solutions?
                                       <br />
                                     </h3>
@@ -9789,7 +9789,7 @@ const Home = () => {
                                 <Typography component="span">
                                   <div className="faq_question-content">
                                     <h3 className="text-size-large">
-                                      How does croneX Tech manage project
+                                      How does croneX Global Technologies manage project
                                       development?
                                       <br />
                                     </h3>
@@ -10125,7 +10125,7 @@ const Home = () => {
                 <div className="text-align-center">
                   <h2 className="heading-style-h4">
                     <span className="text-gradient-grey">Subscribe to</span>
-                    <span class="text-gradient-blue"> croneX Tech</span>
+                    <span class="text-gradient-blue"> croneX Global Technologies</span>
                   </h2>
                   <div className="spacer-xxsmall"></div>
                   <div className="max-width-medium align-center">

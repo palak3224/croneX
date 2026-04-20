@@ -115,7 +115,7 @@ const Contact = () => {
                       <span className="text-gradient-grey">
                         Get in Touch with
                       </span>
-                      <span className="text-gradient-blue"> croneX Tech</span>
+                      <span className="text-gradient-blue"> croneX Global Technologies</span>
                     </h2>
                     <div className="spacer-xsmall"></div>
                     <div>
@@ -301,7 +301,7 @@ const Contact = () => {
                         </h1>
                         <div className="spacer-xsmall"></div>
                         <p className="text-size-medium">
-                          Reach out to croneX Tech today and let's start
+                          Reach out to croneX Global Technologies today and let's start
                           building innovative, secure, and high-impact IT
                           solutions together.
                         </p>

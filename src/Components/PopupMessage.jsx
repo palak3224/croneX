@@ -51,7 +51,7 @@ const PopupMessage = () => {
       <div className="popup-card why_item">
         <button className="popup-close" onClick={() => setShow(false)}>&times;</button>
         
-        <div className="why_item-link" style={{ padding: '2rem' }}>
+        <div className="why_item-link popup-inner">
           {showSuccess ? (
             <div className="contact-success-modal-content">
                <div className="contact-success-icon">

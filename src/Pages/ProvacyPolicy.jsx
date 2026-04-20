@@ -43,7 +43,7 @@ const ProvacyPolicy = () => {
               <div className="policyDiscription">
                 <h6>Privacy Policy</h6>
                 <p>
-                  This Privacy Policy describes how croneX Tech
+                  This Privacy Policy describes how croneX Global Technologies
                   (“Company,” “we,” “our,” or “us”) collects, uses, discloses,
                   and protects your information when you use our mobile and web
                   application (“App”).

@@ -46,7 +46,7 @@ const About = () => {
                       transform: "translate(0px, 0px)",
                     }}
                   >
-                    croneX Tech is a future-focused technology company founded
+                    croneX Global Technologies is a future-focused technology company founded
                     in 2024 with a passion for building intelligent, scalable,
                     and high-performance digital solutions. We deliver a
                     complete suite of IT services including software
@@ -68,7 +68,7 @@ const About = () => {
                     }}
                   >
                     With a strong foundation in product thinking and deep
-                    technical expertise, croneX Tech has quickly evolved into a
+                    technical expertise, croneX Global Technologies has quickly evolved into a
                     trusted innovation partner for startups, SMEs, financial
                     institutions, and global enterprises
                   </p>
@@ -105,7 +105,7 @@ const About = () => {
                       transform: "translate(0px, 0px)",
                     }}
                   >
-                    At croneX Tech, we combine technology + domain expertise +
+                    At croneX Global Technologies, we combine technology + domain expertise +
                     creativity to help businesses grow smarter, faster, and more
                     efficiently.
                   </p>
@@ -172,7 +172,7 @@ const About = () => {
                               We design and develop world-class IT and FinTech
                               solutions that redefine efficiency and
                               performance. With a focus on security,
-                              scalability, and innovation, CroneX Tech enables
+                              scalability, and innovation, croneX Global Technologies enables
                               businesses to thrive in a rapidly evolving digital
                               landscape.
                             </p>
@@ -219,7 +219,7 @@ const About = () => {
                             <div className="spacer-xsmall"></div>
                             <p className="text-size-medium">
                               Our purpose is to define a clear strategy and
-                              structure for the croneX Tech corporate
+                              structure for the croneX Global Technologies corporate
                               website—built to reflect our identity as a
                               cutting-edge IT, Cloud, and AI service provider
                               with deep expertise in FinTech. This platform will
@@ -267,7 +267,7 @@ const About = () => {
                             <p className="text-size-medium">
                               Our vision is to create a high-impact, visually
                               stunning, and animation-rich digital presence that
-                              positions croneX Tech as a premium global IT
+                              positions croneX Global Technologies as a premium global IT
                               services leader. We aim to build a website that
                               inspires confidence, showcases our FinTech
                               mastery, and elevates our brand with modern
@@ -315,7 +315,7 @@ const About = () => {
                               engagement. Through this website, we aim to become
                               the central destination for service inquiries,
                               lead generation, and upcoming webinars. We are
-                              focused on strengthening croneX Tech’s brand
+                              focused on strengthening croneX Global Technologies’s brand
                               identity, enhancing online visibility, and
                               presenting our proven expertise through detailed
                               FinTech case studies, team insights, and

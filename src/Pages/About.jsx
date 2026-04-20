@@ -57,7 +57,7 @@ const About = () => {
                         }}
                       >
                         <span className="text-gradient-grey"> The Core of</span>{" "}
-                        <span className="text-gradient-blue">croneX Tech</span>
+                        <span className="text-gradient-blue">croneX Global Technologies</span>
                       </h1>
                       <div className="spacer-xsmall"></div>
                       <p
@@ -72,14 +72,14 @@ const About = () => {
                           transform: "translate(0px, 0px)",
                         }}
                       >
-                        croneX Tech is a premier IT, Cloud, and AI solutions
+                        croneX Global Technologies is a premier IT, Cloud, and AI solutions
                         provider, specializing in FinTech innovations across
                         Mutual Funds, Stock Market, Insurance, and Transaction
                         Systems. With a team of industry experts and
                         cutting-edge technologies, we deliver scalable, secure,
                         and intelligent solutions that empower businesses to
                         thrive in the digital era. Our commitment to excellence,
-                        innovation, and client success positions croneX Tech as
+                        innovation, and client success positions croneX Global Technologies as
                         a trusted partner for organizations seeking
                         transformative FinTech solutions globally.
                       </p>
