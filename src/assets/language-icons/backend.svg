@@ -1,0 +1,26 @@
+<svg width="46" height="46" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background Circle -->
+  <circle cx="23" cy="23" r="18" fill="#7FEBA1"/>
+  
+  <!-- Server Stack -->
+  <path d="M14 12C14 11.4477 14.4477 11 15 11H31C31.5523 11 32 11.4477 32 12V16C32 16.5523 31.5523 17 31 17H15C14.4477 17 14 16.5523 14 16V12Z" stroke="#333" stroke-width="1.5" fill="white"/>
+  
+  <path d="M14 20C14 19.4477 14.4477 19 15 19H31C31.5523 19 32 19.4477 32 20V24C32 24.5523 31.5523 25 31 25H15C14.4477 25 14 24.5523 14 24V20Z" stroke="#333" stroke-width="1.5" fill="white"/>
+  
+  <path d="M14 28C14 27.4477 14.4477 27 15 27H31C31.5523 27 32 27.4477 32 28V32C32 32.5523 31.5523 33 31 33H15C14.4477 33 14 32.5523 14 32V28Z" stroke="#333" stroke-width="1.5" fill="white"/>
+  
+  <!-- Server Status Lights -->
+  <circle cx="17" cy="14" r="1" fill="#333"/>
+  <circle cx="17" cy="22" r="1" fill="#333"/>
+  <circle cx="17" cy="30" r="1" fill="#333"/>
+  
+  <!-- Database Connection Lines -->
+  <path d="M22 14H28" stroke="#333" stroke-width="1.5" stroke-linecap="round"/>
+  <path d="M22 22H28" stroke="#333" stroke-width="1.5" stroke-linecap="round"/>
+  <path d="M22 30H28" stroke="#333" stroke-width="1.5" stroke-linecap="round"/>
+  
+  <!-- Connection Points -->
+  <circle cx="28" cy="14" r="1" fill="#333"/>
+  <circle cx="28" cy="22" r="1" fill="#333"/>
+  <circle cx="28" cy="30" r="1" fill="#333"/>
+</svg>

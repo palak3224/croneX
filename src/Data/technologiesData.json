@@ -1,0 +1,332 @@
+{
+    "categories": [
+      {
+        "title": "Programming Languages",
+        "icon": "programing",
+        "subcategories": [
+          {
+            "title": "General-purpose",
+            "content": "Excel with Python, Java, JavaScript, Typescript, Node, C#, C++, Go, PHP, Kotlin, Swift, Ruby, and VB.Net for versatile application development.",
+            "technologies": [
+              "Python",
+              "Java",
+              "C",
+              "C++",
+              "JavaScript",
+              "TypeScript",
+              "Node.js",
+              "Go",
+              "PHP",
+              "Kotlin",
+              "Swift",
+              "Ruby",
+              "VB"
+            ]
+          },
+          {
+            "title": "Data Science",
+            "content": "Harness the power of data with Python and R.",
+            "technologies": [
+              "Python",
+              "R"
+            ]
+          },
+          {
+            "title": "Mobile App",
+            "content": "Engage users with Java, React Native, Xamarin, Ionic, Kotlin, Swift, and Dart for Android and iOS.",
+            "technologies": [
+              "Kotlin",
+              "Swift",
+              "Flutter",
+              "React-Native"
+            ]
+          }
+        ]
+      },
+      {
+        "title": "Front-End",
+        "icon": "frontend",
+        "subcategories": [
+          {
+            "title": "Javascript",
+            "content": "Captivate your audience with applications built on Core JavaScript, Typescript, React.js, Angular, and Vue.js.",
+            "technologies": [
+              "JavaScript",
+              "TypeScript",
+              "React",
+              "Vue",
+              "Angular"
+            ]
+          },
+          {
+            "title": "UI Libraries",
+            "content": "Create stunning interfaces with Material-UI, Bootstrap, Tailwind CSS, Magic-UI, Aceternity-UI, and Ant Design.",
+            "technologies": [
+              "Material-Ui",
+              "Bootstrap",
+              "Ant Design",
+              "Shadcn-Ui",
+              "Tailwind-Css",
+              "Magic-Ui",
+              "Aceternity-Ui"
+            ]
+          },
+          {
+            "title": "Markup Essentials",
+            "content": "Lay the foundation of your web presence with HTML and CSS.",
+            "technologies": [
+              "HTML",
+              "CSS"
+            ]
+          }
+        ]
+      },
+      {
+        "title": "Back-End",
+        "icon": "backend",
+        "subcategories": [
+          {
+            "title": "Frameworks",
+            "content": "Drive your application's engine with Node.js, .NET, Spring, Django, and Laravel.",
+            "technologies": [
+              "Nodejs",
+              ".NET",
+              ".NET Core",
+              "SpringBoot",
+              "Django",
+              "Laravel"
+            ]
+          },
+          {
+            "title": "Databases",
+            "content": "Secure and manage your data with MySQL, PostgreSQL, MongoDB, Redis, and SQL Server.",
+            "technologies": [
+              "MySQL",
+              "PostgreSQL",
+              "MongoDB",
+              "Redis",
+              "SQL"
+            ]
+          },
+          {
+            "title": "API Development",
+            "content": "Connect and extend your applications with RESTful APIs and GraphQL.",
+            "technologies": [
+              "RestApi",
+              "GraphQL"
+            ]
+          }
+        ]
+      },
+      {
+        "title": "CMS & E-Commerce Platforms",
+        "icon": "ecommerce",
+        "subcategories": [
+          {
+            "title": "Content Management Systems",
+            "content": "Simplify content handling with WordPress, Drupal, Joomla, Contentful, and Sitecore.",
+            "technologies": [
+              "WordPress",
+              "Drupal",
+              "Joomla",
+              "Contentful",
+              "Sitecore"
+            ]
+          },
+          {
+            "title": "E-Commerce Solutions",
+            "content": "Enhance your online storefront with Magento, Shopify, WooCommerce, BigCommerce, and PrestaShop.",
+            "technologies": [
+              "Magento",
+              "Shopify",
+              "WooCommerce",
+              "BigCommerce",
+              "PrestaShop"
+            ]
+          }
+        ]
+      },
+      {
+        "title": "Cloud & Containerization",
+        "icon": "cloud",
+        "subcategories": [
+          {
+            "title": "Public Cloud Services",
+            "content": "Expand globally with AWS, Azure, and Google Cloud Platform.",
+            "technologies": [
+              "AWS",
+              "Azure",
+              "Google Cloud"
+            ]
+          },
+          {
+            "title": "Containerization Tools",
+            "content": "Streamline deployment with Docker and Kubernetes.",
+            "technologies": [
+              "Docker",
+              "Kubernetes"
+            ]
+          }
+        ]
+      },
+      {
+        "title": "AI, Ml & GenAI",
+        "icon": "ai",
+        "subcategories": [
+          {
+            "title": "AI, Ml Frameworks",
+            "content": "Lead innovation with TensorFlow, PyTorch, Scikit-learn, Keras, and MXNet.",
+            "technologies": [
+              "Tensorflow",
+              "Pytorch",
+              "Keras",
+              "MXNet",
+              "Scikit-Learn",
+              "Generative AI",
+              "Multimodal AI"
+            ]
+          },
+          {
+            "title": "Natural Language Processing",
+            "content": "Enhance interaction with spaCy and NLTK.",
+            "technologies": [
+              "SpaCy",
+              "NLTK"
+            ]
+          },
+          {
+            "title": "Computer Vision",
+            "content": "Transform content analysis with OpenCV.",
+            "technologies": [
+              "OpenCV"
+            ]
+          },
+          {
+            "title": "Reinforcement Learning",
+            "content": "Experiment and learn with OpenAI Gym.",
+            "technologies": [
+              "OpenAI Gym",
+              "Retrieval-Augmented Generation"
+            ]
+          }
+        ]
+      },
+      {
+        "title": "Data Science & Analytics",
+        "icon": "datascience",
+        "subcategories": [
+          {
+            "title": "Data Warehousing & Big Data",
+            "content": "Master data storage and processing with Snowflake, Redshift, and Apache Spark.",
+            "technologies": [
+              "Snowflake",
+              "Redshift",
+              "Apache Spark"
+            ]
+          },
+          {
+            "title": "Data Visualization & BI",
+            "content": "Derive insights with Tableau, Power BI and QlikView.",
+            "technologies": [
+              "Tableau",
+              "Power BI",
+              "QlikView"
+            ]
+          },
+          {
+            "title": "DataOps",
+            "content": "Optimize your data pipelines with Airflow and Heroku.",
+            "technologies": [
+              "Airflow",
+              "Heroku"
+            ]
+          }
+        ]
+      },
+      {
+        "title": "Web 3.0 Development",
+        "icon": "webdevelopment",
+        "subcategories": [
+          {
+            "title": "Blockchain Platforms",
+            "content": "Ensure transaction security with Ethereum, Hyperledger, Fabric and Corda.",
+            "technologies": [
+              "Ethereum",
+              "Hyperledger",
+              "Fabric",
+              "Corda"
+            ]
+          },
+          {
+            "title": "Smart Contract Development",
+            "content": "Build trust with smart contracts in Solidity and Rust.",
+            "technologies": [
+              "Solidity",
+              "Rust"
+            ]
+          }
+        ]
+      },
+      {
+        "title": "UI/UX Design",
+        "icon": "uiux",
+        "subcategories": [
+          {
+            "title": "Design Tools",
+            "content": "Craft compelling designs with Figma, Adobe XD, and Sketch.",
+            "technologies": [
+              "Figma",
+              "Adobe XD",
+              "Sketch"
+            ]
+          },
+          {
+            "title": "Accessibility",
+            "content": "Make your digital assets accessible to all with best practices.",
+            "technologies": [
+              "Accessibility"
+            ]
+          }
+        ]
+      },
+      {
+        "title": "Quality Assurance",
+        "icon": "qa",
+        "subcategories": [
+          {
+            "title": "Manual Testing",
+            "content": "Rigorously test application to ensure they work as expected.",
+            "technologies": [
+              "Manual Testing"
+            ]
+          },
+          {
+            "title": "Automated Testing",
+            "content": "Assure quality with Selenium, Cypress, and Jest.",
+            "technologies": [
+              "Selenium",
+              "Cypress",
+              "Playwright",
+              "Jamarin",
+              "Jest"
+            ]
+          },
+          {
+            "title": "API Testing",
+            "content": "Ensure robust integrations with Postman and SoapUI.",
+            "technologies": [
+              "Postman",
+              "SoapUI"
+            ]
+          },
+          {
+            "title": "Performance Testing",
+            "content": "Optimize performance with JMeter ",
+            "technologies": [
+              "JMeter"
+            ]
+          }
+        ]
+      }
+    ]
+  }

@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" version="1.1" width="64" height="64">
+  <defs id="defs4">
+    <style id="style2">.cls-1{fill:#ffffff}</style>
+  </defs>
+  <g id="g967" transform="translate(-30.313 -58.94) scale(3.03131)">
+    <path id="path8" d="M16.015 39.164a.1.1 0 01-.08-.042l-5.917-8.378a.1.1 0 01-.009-.099l4.285-9.321a.099.099 0 01.08-.057l10.201-.944a.094.094 0 01.09.042l5.916 8.377a.1.1 0 01.01.1l-4.285 9.32a.1.1 0 01-.081.058l-10.2.943h-.01zm-5.802-8.488l5.85 8.285 10.087-.933 4.237-9.218-5.85-8.284-10.087.933zm16.003 7.445z" class="cls-1" fill="#ffffff" stroke-width=".255"/>
+    <path id="path10" d="M15.98 39.142l-1.638-8.524-.008-9.319 7.977 2.348 8.272 5.146-6.143 5.46zm-1.546-17.71l.007 9.177 1.61 8.378 8.33-4.813 6.037-5.367-8.153-5.072z" class="cls-1" fill="#ffffff" stroke-width=".255"/>
+    <circle id="circle12" r=".297" cy="23.741" cx="22.442" class="cls-1" fill="#ffffff" stroke-width=".255"/>
+    <path id="path14" d="M22.442 24.354a.613.613 0 11.613-.613.613.613 0 01-.613.613zm0-.631l-.018.018a.018.018 0 00.018.017z" class="cls-1" fill="#ffffff" stroke-width=".255"/>
+    <circle id="circle16" r=".297" cy="34.199" cx="24.425" class="cls-1" fill="#ffffff" stroke-width=".255"/>
+    <path id="path18" d="M24.425 34.812a.613.613 0 11.613-.613.613.613 0 01-.613.613zm0-.63l-.018.017a.018.018 0 00.018.017z" class="cls-1" fill="#ffffff" stroke-width=".255"/>
+    <circle id="circle20" r=".297" cy="39.065" cx="16.088" class="cls-1" fill="#ffffff" stroke-width=".255"/>
+    <path id="path22" d="M16.088 39.678a.613.613 0 11.612-.613.613.613 0 01-.612.613zm0-.631l-.018.018a.018.018 0 00.018.017z" class="cls-1" fill="#ffffff" stroke-width=".255"/>
+    <circle id="circle24" r=".297" cy="30.708" cx="14.384" class="cls-1" fill="#ffffff" stroke-width=".255"/>
+    <path id="path26" d="M14.384 31.32a.613.613 0 11.612-.612.613.613 0 01-.612.613zm0-.63l-.018.018a.018.018 0 00.018.018z" class="cls-1" fill="#ffffff" stroke-width=".255"/>
+    <circle id="circle28" r=".297" cy="28.815" cx="30.5" class="cls-1" fill="#ffffff" stroke-width=".255"/>
+    <path id="path30" d="M30.5 29.427a.613.613 0 11.613-.612.613.613 0 01-.613.612zm0-.63l-.018.018a.018.018 0 00.018.017z" class="cls-1" fill="#ffffff" stroke-width=".255"/>
+    <circle id="circle32" r=".297" cy="21.365" cx="14.384" class="cls-1" fill="#ffffff" stroke-width=".255"/>
+    <path id="path34" d="M14.384 21.978a.613.613 0 11.612-.613.613.613 0 01-.612.613zm0-.63l-.018.017a.018.018 0 00.018.018z" class="cls-1" fill="#ffffff" stroke-width=".255"/>
+    <path id="path36" d="M26.216 38.22a.098.098 0 01-.033-.005l-7.778-2.746-8.354-4.696a.099.099 0 01-.019-.16l6.286-5.76 8.219-4.518a.098.098 0 01.088-.004.1.1 0 01.056.069l1.842 8.095-.208 9.628a.1.1 0 01-.043.08.098.098 0 01-.056.017zm-15.95-7.553l8.22 4.622 7.634 2.693.207-9.467-1.81-7.943-8.084 4.442z" class="cls-1" fill="#ffffff" stroke-width=".255"/>
+    <path id="path38" d="M24.458 34.236l-.04-.014-10.083-3.505.033-.028 8.09-6.995zm-10.025-3.538l9.96 3.463-1.967-10.374z" class="cls-1" fill="#ffffff" stroke-width=".255"/>
+    <path id="path40" d="M18.374 35.561l-2.12-10.786L26.62 28.48zM16.516 25.08l1.987 10.11 7.729-6.636z" class="cls-1" fill="#ffffff" stroke-width=".255"/>
+    <path id="rect42" transform="rotate(-29.328)" class="cls-1" fill="#ffffff" stroke-width=".255" d="M1.977 25.672h.198v4.085h-.198z"/>
+    <path transform="translate(9.18 -1.284) scale(.25472)" id="polygon44" class="cls-1" fill="#ffffff" d="M36.016 143.71l.656.42-9.228 14.482-.656-.419z"/>
+    <path id="rect46" transform="rotate(-85.822)" class="cls-1" fill="#ffffff" stroke-width=".255" d="M-26.615 28.433h.198v4.085h-.198z"/>
+  </g>
+</svg>
