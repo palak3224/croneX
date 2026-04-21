@@ -1,7 +1,118 @@
-import React from 'react'
+import React, { useMemo, useState } from "react";
+import googleReviews from "../Data/googleReviews.json";
 // import './Testimonials.css'
 
 const Testimonials = () => {
+  const reviews = Array.isArray(googleReviews) ? googleReviews : [];
+
+  const { topReviews, bottomReviews } = useMemo(() => {
+    const top = [];
+    const bottom = [];
+    reviews.forEach((r, idx) => {
+      if (idx % 2 === 0) top.push(r);
+      else bottom.push(r);
+    });
+    return { topReviews: top, bottomReviews: bottom };
+  }, [reviews]);
+
+  const getInitials = (name = "") =>
+    name
+      .trim()
+      .split(/\s+/)
+      .slice(0, 2)
+      .map((p) => p[0]?.toUpperCase())
+      .filter(Boolean)
+      .join("");
+
+  const isLikelyImageUrl = (url = "") =>
+    /^https?:\/\/.+\.(png|jpe?g|webp|gif|avif)(\?.*)?$/i.test(url);
+
+  const ReviewAvatar = ({ name, url }) => {
+    const [errored, setErrored] = useState(false);
+    const showImg = Boolean(url) && isLikelyImageUrl(url) && !errored;
+
+    if (!showImg) {
+      return (
+        <div
+          className="home_testimonials_author-image"
+          aria-label={name ? `${name} avatar` : "Reviewer avatar"}
+          style={{
+            width: 44,
+            height: 44,
+            borderRadius: "50%",
+            background: "rgba(255,255,255,0.08)",
+            display: "flex",
+            alignItems: "center",
+            justifyContent: "center",
+            fontWeight: 600,
+          }}
+        >
+          {getInitials(name) || "?"}
+        </div>
+      );
+    }
+
+    return (
+      <img
+        src={url}
+        loading="lazy"
+        alt={name ? `${name} profile` : "Reviewer profile"}
+        className="home_testimonials_author-image"
+        onError={() => setErrored(true)}
+      />
+    );
+  };
+
+  const LargeReviewCard = ({ review }) => (
+    <div
+      reveal-item=""
+      className="home_testimonials_item is-large"
+    >
+      <div className="text-size-large">"{review?.review_text ?? ""}"</div>
+      <div className="spacer-large"></div>
+      <div className="home_testimonials_author-wrapper">
+        <ReviewAvatar name={review?.name} url={review?.profile_url} />
+        <div>
+          <div className="text-size-medium text-weight-semibold text-color-primary">
+            {review?.name ?? ""}
+          </div>
+          {review?.time ? (
+            <div className="text-color-tertiary">{review.time}</div>
+          ) : null}
+        </div>
+      </div>
+      <div className="home_testimonials_gradient-2"></div>
+      <div className="home_testimonials_gradient-1"></div>
+      <div className="home_testimonials_border"></div>
+    </div>
+  );
+
+  const SmallReviewCard = ({ review }) => (
+    <div reveal-item="" className="home_testimonials_item">
+      <div>
+        <div className="spacer-xxtiny"></div>
+        <div className="text-size-medium">{review?.review_text ?? ""}</div>
+      </div>
+      <div className="spacer-xlarge"></div>
+      <div className="testimonials_comany_text_wrap">
+        <div style={{ display: "flex", gap: 10, alignItems: "center" }}>
+          <ReviewAvatar name={review?.name} url={review?.profile_url} />
+          <div>
+        <div className="text-color-primary text-weight-medium">
+          {review?.name ?? ""}
+        </div>
+        {review?.time ? (
+          <div className="text-color-tertiary">{review.time}</div>
+        ) : null}
+          </div>
+        </div>
+      </div>
+      <div className="home_testimonials_gradient-2"></div>
+      <div className="home_testimonials_gradient-1"></div>
+      <div className="home_testimonials_border"></div>
+    </div>
+  );
+
   return (
      <section className="section_home_testimonials">
             <div className="padding-global">
@@ -26,156 +137,34 @@ const Testimonials = () => {
                   >
                     <div className="code-embed w-embed"></div>
                     <div className="home_testimonials_list is-top">
-                      <div
-                        reveal-item=""
-                        id="w-node-f28e81ae-c56d-109a-0b80-6578a7b79dd0-1c2c275d"
-                        className="home_testimonials_item is-large"
-                      >
-                        <div className="text-size-large">
-                          "croneX Global Technologies transformed our financial operations with
-                          a secure and high-performance digital platform. Their
-                          understanding of Mutual Funds and transaction systems
-                          is exceptional. The team delivered on time, stayed
-                          transparent throughout, and helped us scale
-                          confidently. We've seen a 60% improvement in transaction processing speed."
-                        </div>
-                        <div className="spacer-large"></div>
-                        <div className="home_testimonials_author-wrapper">
-                          <div>
-                            <div className="text-size-medium text-weight-semibold text-color-primary">
-                              Neeraj Sharma
-                            </div>
-                            <div className="text-color-tertiary">
-                              Founder - AllignMF Investments
-                            </div>
-                          </div>
-                        </div>
-                        <div className="home_testimonials_gradient-2"></div>
-                        <div className="home_testimonials_gradient-1"></div>
-                        <div className="home_testimonials_border"></div>
-                      </div>
-                      <div
-                        reveal-item=""
-                        className="home_testimonials_item is-large"
-                      >
-                        <div className="text-size-large">
-                          "Their cloud migration and AI automation expertise
-                          helped us reduce operational costs by 40%. croneX Global Technologies
-                          is more than a technology partner— they are strategic
-                          problem-solvers who understand real business
-                          challenges. The seamless transition to cloud infrastructure exceeded our expectations."
-                        </div>
-                        <div className="spacer-large"></div>
-                        <div className="home_testimonials_author-wrapper">
-                          <div>
-                            <div className="text-size-medium text-weight-semibold text-color-primary">
-                              Vaibhav Bhargav
-                            </div>
-                            <div className="text-color-tertiary">
-                              Founder - Podium Systems
-                            </div>
-                          </div>
-                        </div>
-                        <div className="home_testimonials_gradient-2"></div>
-                        <div className="home_testimonials_gradient-1"></div>
-                        <div className="home_testimonials_border"></div>
-                      </div>
-                      <div
-                        reveal-item=""
-                        id="w-node-b737643b-737d-a0af-dbad-29cb36ac6743-1c2c275d"
-                        className="home_testimonials_item"
-                      >
-                        <div>
-                          <div className="spacer-xxtiny"></div>
-                          <div className="text-size-medium">
-                            The custom software built by croneX Global Technologies streamlined
-                            our internal processes and improved client
-                            experience significantly. Their attention to detail and commitment to quality is remarkable.
-                          </div>
-                        </div>
-                        <div className="spacer-xlarge"></div>
-                        <div className="testimonials_comany_text_wrap">
-                          <div className="text-color-primary text-weight-medium">
-                            Gourav Bhargav
-                          </div>
-                          <div className="text-color-tertiary">
-                              Co Founder - BiggFund
-                            </div>
-                        </div>
-                        <div className="home_testimonials_gradient-2"></div>
-                        <div className="home_testimonials_gradient-1"></div>
-                        <div className="home_testimonials_border"></div>
-                      </div>
+                      {topReviews.map((review, idx) =>
+                        idx % 3 === 2 ? (
+                          <SmallReviewCard
+                            key={`${review?.name ?? "review"}-${idx}`}
+                            review={review}
+                          />
+                        ) : (
+                          <LargeReviewCard
+                            key={`${review?.name ?? "review"}-${idx}`}
+                            review={review}
+                          />
+                        )
+                      )}
                     </div>
                     <div className="home_testimonials_list is-bottom">
-                      <div
-                        reveal-item=""
-                        id="w-node-edaca46f-6f0e-f591-f7af-c94841540607-1c2c275d"
-                        className="home_testimonials_item"
-                      >
-                        <div>
-                          <div className="spacer-xxtiny"></div>
-                          <div className="text-size-medium">
-                            Their UI/UX capabilities are world-class. The user interface they designed for our e-commerce platform increased our conversion rate by 35%.
-                          </div>
-                        </div>
-                        <div className="spacer-xlarge"></div>
-                        <div className="testimonials_comany_text_wrap">
-                          <div className="text-color-primary text-weight-medium">
-                            Govind Dixit
-                          </div>
-                          <div className="text-color-tertiary">
-                            Founder - Arthvidhi Investments
-                          </div>
-                        </div>
-                        <div className="home_testimonials_gradient-2"></div>
-                        <div className="home_testimonials_gradient-1"></div>
-                        <div className="home_testimonials_border"></div>
-                      </div>
-                      <div
-                        reveal-item=""
-                        className="home_testimonials_item is-large"
-                      >
-                        <div className="text-size-large">
-                          "croneX Global Technologies helped us strengthen our security
-                          infrastructure and ensured full compliance with
-                          industry regulations. Their cybersecurity team is
-                          knowledgeable, proactive, and reliable. We've had zero security incidents since implementation."
-                        </div>
-                        <div className="spacer-large"></div>
-                        <div className="home_testimonials_author-wrapper">
-                          <div>
-                            <div className="text-size-medium text-weight-semibold text-color-primary">
-                              Bhavna Chourasiya
-                            </div>
-                            <div className="text-color-tertiary">Co Founder - FourNest</div>
-                          </div>
-                        </div>
-                        <div className="home_testimonials_gradient-2"></div>
-                        <div className="home_testimonials_gradient-1"></div>
-                        <div className="home_testimonials_border"></div>
-                      </div>
-                      <div
-                        reveal-item=""
-                        id="w-node-c1405e6d-cede-77b6-985c-89c53c894f5a-1c2c275d"
-                        className="home_testimonials_item is-large"
-                      >
-                        <div className="text-size-large">
-                          "Working with croneX Global Technologies on our digital transformation journey has been exceptional. Their AI-driven solutions automated our workflows, reducing manual work by 50% and improving overall efficiency. Highly recommended!"
-                        </div>
-                        <div className="spacer-large"></div>
-                        <div className="home_testimonials_author-wrapper">
-                          <div>
-                            <div className="text-size-medium text-weight-semibold text-color-primary">
-                              Anik Desai
-                            </div>
-                            <div className="text-color-tertiary">CEO, TechInnovate Solutions</div>
-                          </div>
-                        </div>
-                        <div className="home_testimonials_gradient-2"></div>
-                        <div className="home_testimonials_gradient-1"></div>
-                        <div className="home_testimonials_border"></div>
-                      </div>
+                      {bottomReviews.map((review, idx) =>
+                        idx % 3 === 0 ? (
+                          <SmallReviewCard
+                            key={`${review?.name ?? "review"}-${idx}`}
+                            review={review}
+                          />
+                        ) : (
+                          <LargeReviewCard
+                            key={`${review?.name ?? "review"}-${idx}`}
+                            review={review}
+                          />
+                        )
+                      )}
                     </div>
                   </div>
                 </div>
