@@ -129,6 +129,12 @@ const Footer = memo(() => {
                         >
                           App Development
                         </NavLink>
+                         <NavLink
+                          to="/digital-marketing"
+                          className="text-style-link text-weight-semibold text-color-primary"
+                        >
+                          Digital Marketing
+                        </NavLink>
                         <NavLink
                           to="/service/custom-software-development"
                           className="text-style-link text-weight-semibold text-color-primary"

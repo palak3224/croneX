@@ -12,6 +12,7 @@ import "./App.css";
 const Home = lazy(() => import("./Pages/Home"));
 const About = lazy(() => import("./Pages/About"));
 const ServiceDetails = lazy(() => import("./Pages/ServiceDetails"));
+const DigitalMarketing = lazy(() => import("./Pages/DigitalMarketing"));
 const Project = lazy(() => import('./Pages/Project'));
 const Contact = lazy(() => import('./Pages/Contact'));
 const TermsCondition = lazy(() => import("./Pages/TermsCondition"));
@@ -56,6 +57,7 @@ const App = () => {
             <Route element={<Home />} path="/" />
             <Route element={<About />} path="/about" />
             <Route element={<ServiceDetails />} path="/service/:slug" />
+            <Route element={<DigitalMarketing />} path="/digital-marketing" />
             <Route element={<Project />} path="/projects" />
             <Route element={<Contact />} path="/contact" />
             <Route element={<Pricing />} path="/pricing" />
